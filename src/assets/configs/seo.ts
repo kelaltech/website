@@ -20,7 +20,8 @@ export default {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.kelaltech.com/',
-    site_name: 'kelal tech plc | Official Website'
+    site_name: 'kelal tech plc | Official Website',
+    images: [{ url: 'https://www.kelaltech.com/promo.jpg' }]
   },
 
   twitter: {

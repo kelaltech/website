@@ -6,6 +6,9 @@
     <lastmod>2019-09-18T17:00:31+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.kelaltech.com/promo.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://www.kelaltech.com/#solutions</loc>
