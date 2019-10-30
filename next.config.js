@@ -72,7 +72,7 @@ module.exports = config = withPlugins(
     sass,
 
     // next-purgecss
-    [purgeCss, { purgeCssPaths: ['src/**/*'] }],
+    [purgeCss, { purgeCssPaths: ['pages/**/*', 'src/**/*'] }],
 
     // next-images
     images,

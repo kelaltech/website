@@ -2,10 +2,10 @@ import React from 'react'
 import App from 'next/app'
 import { DefaultSeo } from 'next-seo/lib'
 
-import '../assets/styles/_app.scss'
-import SEO from '../assets/configs/seo'
-import Layout from '../shared/components/layout/layout'
-import { initGA, logPageView } from '../assets/scripts/google-analytics'
+import '../src/assets/styles/_app.scss'
+import SEO from '../src/assets/configs/seo'
+import Layout from '../src/shared/components/layout/layout'
+import { initGA, logPageView } from '../src/assets/scripts/google-analytics'
 
 // AMP support
 export const config = { amp: 'hybrid' }
