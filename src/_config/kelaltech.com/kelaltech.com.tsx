@@ -287,7 +287,7 @@ const config: IConfigSrc = {
               name: 'Biruk Tesfaye',
               photoSrc: `/api/gravatar?email=${encodeURIComponent(
                 'biruktesfayeve@gmail.com'
-              )}&s=130&d=mp`,
+              )}&s=100&d=mp`,
               links: [
                 { icon: faGlobeAfrica, url: 'https://biruk.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:biruk@kelaltech.com' },
@@ -303,7 +303,7 @@ const config: IConfigSrc = {
               name: 'Brook Belihu',
               photoSrc: `/api/gravatar?email=${encodeURIComponent(
                 'brookbdt@gmail.com'
-              )}&s=130&d=mp`,
+              )}&s=100&d=mp`,
               links: [
                 // { icon: faGlobeAfrica, url: 'https://brook.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:brook@kelaltech.com' },
@@ -319,7 +319,7 @@ const config: IConfigSrc = {
               name: 'Dagem Mekonnen',
               photoSrc: `/api/gravatar?email=${encodeURIComponent(
                 'dagixmeko@gmail.com'
-              )}&s=130&d=mp`,
+              )}&s=100&d=mp`,
               links: [
                 //  { icon: faGlobeAfrica, url: 'https://dagem.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:dagem@kelaltech.com' },
@@ -335,7 +335,7 @@ const config: IConfigSrc = {
               name: 'Hiskias Melke',
               photoSrc: `/api/gravatar?email=${encodeURIComponent(
                 'hiskias.melke1@gmail.com'
-              )}&s=130&d=mp`,
+              )}&s=100&d=mp`,
               links: [
                 //  { icon: faGlobeAfrica, url: 'https://hiskias.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:hiskias@kelaltech.com' },
@@ -351,7 +351,7 @@ const config: IConfigSrc = {
               name: 'Kaleab S. Melkie',
               photoSrc: `/api/gravatar?email=${encodeURIComponent(
                 'kaleabmelkie@gmail.com'
-              )}&s=130&d=mp`,
+              )}&s=100&d=mp`,
               links: [
                 { icon: faGlobeAfrica, url: 'https://kaleab.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:kaleab@kelaltech.com' },
