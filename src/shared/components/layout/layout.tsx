@@ -7,9 +7,7 @@ function Layout({ children }: PropsWithChildren<{}>) {
     <>
       <main>{children}</main>
 
-      <footer className="layout-footer">
-        2019 &copy; kelal tech plc
-      </footer>
+      <footer className="layout-footer">2019 &copy; kelal tech plc</footer>
     </>
   )
 }
