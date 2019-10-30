@@ -1,0 +1,26 @@
+body {
+  background-image: linear-gradient(
+    to top right,
+    transparentize($primary, 0.95),
+    transparentize(white, 0.05)
+  );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .font-family-display;
+}
+
+// todo: fix this in gerami v0.1.7 and remove this temp patch
+.gerami-accordion-container {
+  .gerami-modal-img {
+    background-size: cover;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+  }
+}

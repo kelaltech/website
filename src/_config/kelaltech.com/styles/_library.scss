@@ -1,0 +1,48 @@
+@import 'theme';
+
+.gerami-input,
+.gerami-textarea,
+.gerami-input-placeholder,
+.gerami-textarea-placeholder {
+  padding: ($space / 2) $space !important;
+}
+.gerami-input-float,
+.gerami-textarea-float {
+  margin-top: ($space / 4);
+  padding: ($space / 8) ($space / 4) !important;
+
+  background-color: $primary !important;
+  color: white !important;
+  box-shadow: $shade-S;
+}
+
+.gerami-input,
+.gerami-textarea {
+  border-bottom-width: 2px !important;
+  border-bottom-color: transparent;
+
+  background-color: white !important;
+  box-shadow: $shade-L;
+
+  &:active,
+  &:focus {
+    background-color: white;
+    box-shadow: $shade-M, $shade-L;
+  }
+}
+
+.our-solutions-solution_kezera-word-mark {
+  height: 1.4em;
+  width: auto;
+
+  padding: ($space / 2) ($space / 1.4);
+
+  background-color: rgba(255, 255, 255, 0.56);
+}
+
+.our-solutions-solution_gerami {
+  .react-parallax-bgimage {
+    background-color: rgba(0, 120, 180, 0.95) !important;
+    filter: grayscale(1) brightness(122%) !important;
+  }
+}

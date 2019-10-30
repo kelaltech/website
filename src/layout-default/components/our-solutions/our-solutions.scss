@@ -1,0 +1,78 @@
+@import '../../../assets/styles/theme';
+
+.our-solutions {
+  padding-bottom: 0 !important;
+}
+
+.our-solutions-primary-solution {
+}
+
+.our-solutions-other-solutions {
+}
+
+.our-solutions-solution {
+}
+
+.our-solutions-solution-parallax {
+  .react-parallax-bgimage {
+    background-color: transparentize($primary, 0.14);
+  }
+}
+
+.our-solutions-solution-overlay {
+}
+.our-solutions-solution-overlay-active {
+  background-color: rgba(0, 0, 0, 0.56);
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: $shade-L, $shade-M, $shade-S;
+}
+
+.our-solutions-solution-left {
+  padding: ($space * 4) ($space) ($space * 2);
+
+  text-align: center;
+}
+
+.our-solutions-solution-logo {
+  margin: auto;
+}
+
+.our-solutions-solution-right {
+}
+
+.our-solutions-solution-title {
+}
+
+.our-solutions-solution-description {
+  opacity: 0.84;
+}
+
+.our-solutions-solution-actions {
+}
+
+.our-solutions-solution-types {
+  margin-top: $space * 9;
+  padding-top: $space * 9;
+  padding-bottom: 0;
+
+  background-color: $primary;
+}
+
+.our-solutions-solution-types-wrapper {
+  margin-top: -$space * 18;
+}
+
+.our-solutions-solution-type {
+  border-top: 4px solid transparentize($accent, 0.05);
+
+  text-align: center;
+}
+
+.our-solutions-solution-type-icon-container {
+}
+
+.our-solutions-solution-type-icon {
+}
+
+.our-solutions-solution-type-name {
+}

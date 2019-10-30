@@ -1,0 +1,24 @@
+@import '../../../assets/styles/theme';
+
+.the-company-team-slider-container {
+  // todo: rename this (...modal...) after gerami v0.1.7
+  .gerami-accordion-container,
+  .gerami-modal-caption-container {
+    height: 100px !important;
+
+    overflow: hidden;
+  }
+
+  // todo: rename this (...modal...) after gerami v0.1.7
+  .gerami-modal-caption-container {
+    background-color: rgba(0, 0, 0, 0.84);
+
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.the-company-team-link {
+  padding: $space / 2;
+
+  font-size: $font-L;
+}

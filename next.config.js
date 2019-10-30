@@ -61,8 +61,7 @@ module.exports = config = withPlugins(
   [
     // next-env
     env({
-      staticPrefix: 'REACT_APP_',
-      publicPrefix: 'REACT_APP_'
+      staticPrefix: 'REACT_APP_'
     }),
 
     // @zeit/next-css
@@ -72,19 +71,32 @@ module.exports = config = withPlugins(
     sass,
 
     // next-purgecss
-    [purgeCss, { purgeCssPaths: ['pages/**/*', 'src/**/*'] }],
+    // todo
+    // [
+    //   purgeCss,
+    //   {
+    //     purgeCssPaths: [
+    //       'node_modules/animate.css/**/*',
+    //       'node_modules/aos/**/*',
+    //       'node_modules/gerami/**/*',
+    //       'pages/**/*',
+    //       'src/**/*',
+    //     ]
+    //   }
+    // ],
 
     // next-images
     images,
 
     // next-optimized-images
-    [
-      optimizedImages,
-      {
-        handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
-        optimizeImagesInDev: true
-      }
-    ],
+    // todo
+    // [
+    //   optimizedImages,
+    //   {
+    //     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
+    //     optimizeImagesInDev: true
+    //   }
+    // ],
 
     // next-fonts
     fonts,

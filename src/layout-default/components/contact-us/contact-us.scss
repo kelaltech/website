@@ -1,0 +1,78 @@
+@import '../../../assets/styles/theme';
+
+.contact-us-unit {
+  display: inline-flex;
+
+  width: 100%;
+
+  margin: 0 0 $space;
+  padding: ($space * 1.5) $space;
+
+  border-left: 4px solid $accent;
+
+  line-height: 2.2;
+
+  background-color: transparentize(lighten($primary, 84%), 0.5);
+  box-shadow: $shade-L;
+}
+
+.contact-us-icon {
+  margin: auto $space;
+
+  vertical-align: middle;
+
+  color: $primary;
+
+  transition: inherit;
+}
+
+.contact-us-label {
+  flex: 1;
+  margin: auto $space;
+
+  vertical-align: middle;
+
+  .gerami-anchor {
+    color: transparentize($fg, 0.28) !important;
+    box-shadow: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $fg !important;
+
+      .contact-us-icon {
+        color: $primary !important;
+      }
+    }
+  }
+}
+
+.contact-us-social-icon {
+  margin: ($space / 2) $space;
+}
+
+.contact-us-send-message-input {
+  width: 100% !important;
+
+  .gerami-textarea {
+    padding-top: $space !important;
+    line-height: 1.5 !important;
+  }
+}
+
+.contact-us-send-message-submit {
+  margin: ($space / 4) 0 0;
+  padding: 0;
+
+  height: $space * 3;
+  width: 100% !important;
+
+  font-size: inherit;
+
+  color: white;
+
+  &:disabled {
+    background-color: $primary !important;
+  }
+}

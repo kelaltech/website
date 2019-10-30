@@ -1,0 +1,71 @@
+@import '../../../assets/styles/theme';
+
+$headerHeight: 72px;
+
+.header-negation {
+  margin-top: -$headerHeight;
+}
+
+.intro-container {
+  padding: ($space * 4 + $headerHeight) ($space * 2) ($space * 4);
+
+  width: 100%;
+
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.84);
+  background-image: linear-gradient(
+      to top right,
+      transparentize($primary, 0.93),
+      transparent
+    ),
+    linear-gradient(to bottom, transparent -30%, $bg);
+  background-position: left !important;
+}
+
+.intro-logo {
+  line-height: 1;
+}
+
+.intro-wordmark {
+  line-height: 1;
+  font-size: 1.4em;
+}
+
+.intro-display-title {
+  margin-top: $space * 2;
+
+  font-size: 3.5em;
+  font-weight: 400;
+  line-height: 1;
+
+  opacity: 0.7;
+}
+
+.intro-display-subtitle {
+  margin-top: $space * 2;
+
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1;
+
+  opacity: 0.42;
+}
+
+.intro-cta-container {
+  margin: ($space * 4) 0;
+
+  .gerami-button {
+    margin: $space / 2;
+    padding: 0;
+
+    height: $space * 3;
+    width: $space * 10;
+
+    font-size: $font-M;
+  }
+
+  .gerami-button-primary {
+    color: white;
+  }
+}

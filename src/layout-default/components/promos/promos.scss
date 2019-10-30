@@ -1,0 +1,15 @@
+@import '../../../assets/styles/theme';
+
+.promos-container {
+  background-color: transparentize($fg, 0.7);
+  background-image: linear-gradient(
+    to bottom,
+    transparentize($accent, 0.91),
+    transparentize($primary, 0.28)
+  );
+  box-shadow: $inset-shade-L;
+}
+
+.promos-promo {
+  border-top: 4px solid transparentize($accent, 0.05);
+}

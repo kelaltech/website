@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/theme';
+
+.footer {
+  background-image: linear-gradient(
+    to bottom,
+    transparentize($fg, 0.98) 0%,
+    transparent 70%
+  );
+  box-shadow: $inset-shade-L;
+}
+
+.footer-left,
+.footer-right {
+  width: 60px;
+
+  a {
+    color: transparentize($fg, 0.42);
+  }
+}
+
+.footer-left {
+}
+
+.footer-center {
+}
+
+.footer-right {
+  text-align: right;
+}

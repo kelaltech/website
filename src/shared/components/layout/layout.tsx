@@ -1,13 +1,62 @@
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, ReactNode, useEffect, useState } from 'react'
+import { MinHeightProperty } from 'csstype'
+import { Page, Warning } from 'gerami'
 
-import './layout.scss'
+import Header, { IHeaderProps } from './header/header'
+import Footer from './footer/footer'
 
-function Layout({ children }: PropsWithChildren<{}>) {
-  return (
+type ILayoutProps = PropsWithChildren<{
+  error?: any
+  nonContentHeight?: MinHeightProperty<string | number>
+  noShell?: boolean
+  headerOptions?: IHeaderProps
+  overrideHeader?: ReactNode
+  overrideFooter?: ReactNode
+  preHeader?: ReactNode
+}>
+
+function Layout({
+  children,
+  nonContentHeight: nch,
+  noShell: noShellProp,
+  error,
+  headerOptions,
+  overrideHeader,
+  overrideFooter,
+  preHeader
+}: ILayoutProps) {
+  const [noShellState, setNoShellState] = useState(true)
+
+  useEffect(() => {
+    if (noShellProp === undefined) {
+      const fromStorage = window.sessionStorage.getItem('noShell')
+      setNoShellState(fromStorage === null ? false : fromStorage === 'true')
+    } else {
+      window.sessionStorage.setItem('noShell', String(noShellProp))
+      setNoShellState(noShellProp)
+    }
+  }, [noShellProp])
+
+  const contentMinHeight = nch
+    ? `calc(100vh - ${nch}${typeof nch === 'number' ? 'px' : ''})`
+    : `100vh`
+
+  return error ? (
+    <Page>
+      <Warning problem={error} size={'XXL'} />
+    </Page>
+  ) : (
     <>
-      <main>{children}</main>
+      {!noShellState && (
+        <>
+          {preHeader}
+          {overrideHeader || <Header {...headerOptions} />}
+        </>
+      )}
 
-      <footer className="layout-footer">2019 &copy; kelal tech plc</footer>
+      <div style={{ minHeight: contentMinHeight }}>{children}</div>
+
+      {!noShellState && (overrideFooter || <Footer />)}
     </>
   )
 }

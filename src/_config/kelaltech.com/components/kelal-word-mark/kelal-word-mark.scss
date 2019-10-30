@@ -1,0 +1,18 @@
+@import '../../styles/theme';
+
+.kelal-word-mark {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-decoration: none !important;
+  text-transform: lowercase;
+  color: transparentize($primary, 0.07);
+
+  .kelal-work-mark_tech {
+    color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .kelal-word-mark_dot {
+    color: transparentize($accent, 0.14);
+  }
+}

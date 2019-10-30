@@ -1,3 +1,14 @@
-import Home from '../src/app/home/home'
+import React from 'react'
 
-export default Home
+import Home from '../src/layout-default/pages/home/home'
+import LayoutDefault from '../src/layout-default/layout-default'
+
+function Index() {
+  return (
+    <LayoutDefault>
+      <Home />
+    </LayoutDefault>
+  )
+}
+
+export default Index
