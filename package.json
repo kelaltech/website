@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "engines": {
-    "node": ">= 10"
+    "node": ">= 10.16.3"
   },
   "scripts": {
     "dev": "next dev",
