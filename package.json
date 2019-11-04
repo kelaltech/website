@@ -5,6 +5,9 @@
   "author": "kelal tech plc <info@kelaltech.com> (https://www.kelaltech.com)",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": ">= 10"
+  },
   "scripts": {
     "dev": "next dev",
     "start": "cross-env NODE_ENV=production next start",
