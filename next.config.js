@@ -9,9 +9,8 @@ const withPlugins = require('next-compose-plugins')
 const env = require('next-env')
 const css = require('@zeit/next-css')
 const sass = require('@zeit/next-sass')
-const purgeCss = require('next-purgecss')
-const images = require('next-images')
 const fonts = require('next-fonts')
+// 'next-images' is needs just for the ts types in './next-env.d.ts'
 const optimizedImages = require('next-optimized-images')
 const offline = require('next-offline')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
@@ -70,33 +69,21 @@ module.exports = config = withPlugins(
     // @zeit/next-sass
     sass,
 
-    // next-purgecss
-    // todo
-    // [
-    //   purgeCss,
-    //   {
-    //     purgeCssPaths: [
-    //       'node_modules/animate.css/**/*',
-    //       'node_modules/aos/**/*',
-    //       'node_modules/gerami/**/*',
-    //       'pages/**/*',
-    //       'src/**/*',
-    //     ]
-    //   }
-    // ],
-
-    // next-images
-    images,
-
     // next-optimized-images
-    // todo
-    // [
-    //   optimizedImages,
-    //   {
-    //     handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
-    //     optimizeImagesInDev: true
-    //   }
-    // ],
+    [
+      optimizedImages,
+      {
+        handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
+        optimizeImages: true,
+        optimizeImagesInDev: true,
+        responsiveLoader: {
+          adapter: require('responsive-loader/sharp')
+        },
+        imageTrace: {
+          threshold: 200
+        }
+      }
+    ],
 
     // next-fonts
     fonts,

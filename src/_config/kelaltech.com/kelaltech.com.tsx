@@ -21,25 +21,53 @@ import {
   faTelegram,
   faTwitter
 } from '@fortawesome/free-brands-svg-icons'
+import ProgressiveImage from 'react-progressive-image'
 
+import { IImgSrcInput } from '../../lib/img-src'
 import { IConfigSrc } from '../config'
-import logoSvg from './images/brand/logo.svg'
+
 import KelalWordMark from './components/kelal-word-mark/kelal-word-mark'
-import introBgWebP from './images/home/intro/intro-bg.webp'
-import introBgOther from './images/home/intro/intro-bg.jpg'
-import promosBgWebP from './images/home/promos/promos-bg.webp'
-import promosBgOther from './images/home/promos/promos-bg.jpg'
-import theCompanyBgWebP from './images/home/the-company/the-company-bg.webp'
-import theCompanyBgOther from './images/home/the-company/the-company-bg.jpg'
-import kezeraBgWebP from './images/home/solutions/kezera/bg.webp'
-import kezeraBgOther from './images/home/solutions/kezera/bg.jpg'
-import kezeraLogo from './images/home/solutions/kezera/logo.png'
-import kezeraWordMark from './images/home/solutions/kezera/word-mark.png'
+
+const logoSvg: IImgSrcInput = {
+  src: require('./images/brand/logo.svg'),
+  webP: require('./images/brand/logo.svg'),
+  placeholder: require('./images/brand/logo.svg')
+}
+const introBg: IImgSrcInput = {
+  src: require('./images/home/intro/intro-bg.jpg'),
+  webP: require('./images/home/intro/intro-bg.jpg?webp'),
+  placeholder: require('./images/home/intro/intro-bg.jpg?lqip')
+}
+const promosBg: IImgSrcInput = {
+  src: require('./images/home/promos/promos-bg.jpg'),
+  webP: require('./images/home/promos/promos-bg.jpg?webp'),
+  placeholder: require('./images/home/promos/promos-bg.jpg?lqip')
+}
+const theCompanyBg: IImgSrcInput = {
+  src: require('./images/home/the-company/the-company-bg.jpg'),
+  webP: require('./images/home/the-company/the-company-bg.jpg?webp'),
+  placeholder: require('./images/home/the-company/the-company-bg.jpg?lqip')
+}
+const kezeraBg: IImgSrcInput = {
+  src: require('./images/home/solutions/kezera/bg.jpg'),
+  webP: require('./images/home/solutions/kezera/bg.jpg?webp'),
+  placeholder: require('./images/home/solutions/kezera/bg.jpg?lqip')
+}
+const kezeraLogo: IImgSrcInput = {
+  src: require('./images/home/solutions/kezera/logo.png'),
+  webP: require('./images/home/solutions/kezera/logo.png?webp'),
+  placeholder: require('./images/home/solutions/kezera/logo.png?lqip')
+}
+const kezeraWordMark: IImgSrcInput = {
+  src: require('./images/home/solutions/kezera/word-mark.png'),
+  webP: require('./images/home/solutions/kezera/word-mark.png?webp'),
+  placeholder: require('./images/home/solutions/kezera/word-mark.png?lqip')
+}
 
 const config: IConfigSrc = {
   brand: {
     logo: {
-      svgSrc: logoSvg
+      svgSrc: logoSvg.src
     },
     wordMark: {
       component: <KelalWordMark />
@@ -52,7 +80,7 @@ const config: IConfigSrc = {
       {
         type: 'intro',
         props: {
-          bg: { webP: introBgWebP, other: introBgOther },
+          bg: introBg,
           displayTitle: 'We Empower Creators.',
           displaySubtitle: 'Through Digital Platforms.'
         }
@@ -61,7 +89,7 @@ const config: IConfigSrc = {
       {
         type: 'promos',
         props: {
-          bg: { webP: promosBgWebP, other: promosBgOther },
+          bg: promosBg,
           maxPromoPerColumn: 3,
           promos: [
             {
@@ -105,15 +133,22 @@ const config: IConfigSrc = {
           ),
 
           primarySolution: {
-            bg: { webP: kezeraBgWebP, other: kezeraBgOther },
+            bg: kezeraBg,
             logo: kezeraLogo,
             logoSize: '6XL',
             title: (
-              <img
-                src={kezeraWordMark}
-                alt="kezera"
-                className="our-solutions-solution_kezera-word-mark"
-              />
+              <ProgressiveImage
+                placeholder={kezeraWordMark.placeholder}
+                src={kezeraWordMark.src}
+              >
+                {src => (
+                  <img
+                    src={src}
+                    alt="kezera"
+                    className="our-solutions-solution_kezera-word-mark"
+                  />
+                )}
+              </ProgressiveImage>
             ),
             description: (
               <>
@@ -262,7 +297,7 @@ const config: IConfigSrc = {
       {
         type: 'company',
         props: {
-          bg: { webP: theCompanyBgWebP, other: theCompanyBgOther },
+          bg: theCompanyBg,
           description: (
             <>
               <p>
@@ -285,9 +320,11 @@ const config: IConfigSrc = {
           team: [
             {
               name: 'Biruk Tesfaye',
-              photoSrc: `/api/gravatar?email=${encodeURIComponent(
-                'biruktesfayeve@gmail.com'
-              )}&s=100&d=mp`,
+              photoSrc: {
+                src: `/api/gravatar?email=${encodeURIComponent(
+                  'biruktesfayeve@gmail.com'
+                )}&s=100&d=mp`
+              },
               links: [
                 { icon: faGlobeAfrica, url: 'https://biruk.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:biruk@kelaltech.com' },
@@ -301,9 +338,11 @@ const config: IConfigSrc = {
             },
             {
               name: 'Brook Belihu',
-              photoSrc: `/api/gravatar?email=${encodeURIComponent(
-                'brookbdt@gmail.com'
-              )}&s=100&d=mp`,
+              photoSrc: {
+                src: `/api/gravatar?email=${encodeURIComponent(
+                  'brookbdt@gmail.com'
+                )}&s=100&d=mp`
+              },
               links: [
                 // { icon: faGlobeAfrica, url: 'https://brook.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:brook@kelaltech.com' },
@@ -317,9 +356,11 @@ const config: IConfigSrc = {
             },
             {
               name: 'Dagem Mekonnen',
-              photoSrc: `/api/gravatar?email=${encodeURIComponent(
-                'dagixmeko@gmail.com'
-              )}&s=100&d=mp`,
+              photoSrc: {
+                src: `/api/gravatar?email=${encodeURIComponent(
+                  'dagixmeko@gmail.com'
+                )}&s=100&d=mp`
+              },
               links: [
                 //  { icon: faGlobeAfrica, url: 'https://dagem.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:dagem@kelaltech.com' },
@@ -333,9 +374,11 @@ const config: IConfigSrc = {
             },
             {
               name: 'Hiskias Melke',
-              photoSrc: `/api/gravatar?email=${encodeURIComponent(
-                'hiskias.melke1@gmail.com'
-              )}&s=100&d=mp`,
+              photoSrc: {
+                src: `/api/gravatar?email=${encodeURIComponent(
+                  'hiskias.melke1@gmail.com'
+                )}&s=100&d=mp`
+              },
               links: [
                 //  { icon: faGlobeAfrica, url: 'https://hiskias.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:hiskias@kelaltech.com' },
@@ -349,9 +392,11 @@ const config: IConfigSrc = {
             },
             {
               name: 'Kaleab S. Melkie',
-              photoSrc: `/api/gravatar?email=${encodeURIComponent(
-                'kaleabmelkie@gmail.com'
-              )}&s=100&d=mp`,
+              photoSrc: {
+                src: `/api/gravatar?email=${encodeURIComponent(
+                  'kaleabmelkie@gmail.com'
+                )}&s=100&d=mp`
+              },
               links: [
                 { icon: faGlobeAfrica, url: 'https://kaleab.kelaltech.com/' },
                 { icon: faAt, url: 'mailto:kaleab@kelaltech.com' },

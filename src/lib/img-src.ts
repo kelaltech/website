@@ -1,20 +1,17 @@
-export type IImgSrc =
-  | string
-  | {
-      webP: string
-      other: string
-    }
+export type IImgSrc = {
+  src?: string
+  webP?: string
+  placeholder?: string
+}
 
-function imgSrc(src?: IImgSrc | null): string | undefined {
-  return src === undefined || src === null
-    ? undefined
+export type IImgSrcInput = string | IImgSrc
+
+function imgSrc(src?: IImgSrcInput): IImgSrc {
+  return typeof src === 'undefined'
+    ? {}
     : typeof src === 'string'
-    ? src
-    : src.other
-  // todo
-  // : window && window.Modernizr && window.Modernizr.webp
-  // ? src.webP
-  // : src.other
+    ? { src }
+    : src
 }
 
 export default imgSrc

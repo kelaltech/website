@@ -19,7 +19,7 @@
     "lint": "prettier ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
     "format": "prettier --write ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
     "prod": "run-p format build test",
-    "UNSAFE_upgrade": "yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @next/bundle-analyzer @types/aos @types/jest @types/node @types/qs @types/react @types/react-dom @zeit/next-css @zeit/next-sass animate.css aos brotli-webpack-plugin compression-webpack-plugin cross-env dotenv-load husky image-trace-loader imagemin-gifsicle imagemin-mozjpeg imagemin-optipng imagemin-svgo isomorphic-unfetch jest lodash lqip-loader next next-compose-plugins next-env next-fonts next-images next-offline next-optimized-images next-purgecss next-seo node-sass npm-run-all optimize-css-assets-webpack-plugin prettier qs react react-dom react-parallax react-progressive-image responsive-loader sharp svg-sprite-loader typescript webp-loader webpack --latest"
+    "UNSAFE_upgrade": "yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @next/bundle-analyzer @types/aos @types/jest @types/node @types/qs @types/react @types/react-dom @zeit/next-css @zeit/next-sass animate.css aos axios brotli-webpack-plugin compression-webpack-plugin cross-env dotenv-load gerami husky image-trace-loader imagemin-gifsicle imagemin-mozjpeg imagemin-optipng imagemin-svgo isomorphic-unfetch jest lodash lqip-loader next next-compose-plugins next-env next-fonts next-images next-offline next-optimized-images next-seo node-sass npm-run-all optimize-css-assets-webpack-plugin prettier qs react react-dom react-ga react-parallax react-progressive-image react-router-dom responsive-loader sharp svg-sprite-loader typescript webp-loader webpack --latest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
@@ -30,7 +30,7 @@
     "@next/bundle-analyzer": "^9.1.2",
     "@types/aos": "^3.0.2",
     "@types/jest": "^24.0.21",
-    "@types/node": "^12.12.0",
+    "@types/node": "^12.12.5",
     "@types/qs": "^6.5.3",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
@@ -60,8 +60,7 @@
     "next-fonts": "^0.19.0",
     "next-images": "^1.2.0",
     "next-offline": "^4.0.6",
-    "next-optimized-images": "^2.5.3",
-    "next-purgecss": "^3.1.1",
+    "next-optimized-images": "^2.5.4",
     "next-seo": "^2.2.1",
     "node-sass": "^4.13.0",
     "npm-run-all": "^4.1.5",

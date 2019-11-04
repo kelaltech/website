@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { Block, Content, Image, Yoga } from 'gerami'
 import { Parallax } from 'react-parallax'
+import ProgressiveImage from 'react-progressive-image'
 
 import './our-solutions.scss'
 import { ISolution, OurSolutionsProps } from './our-solutions-props'
@@ -9,68 +10,84 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const renderSolution = (solution: ISolution): ReactNode => (
   <div className={solution.className}>
-    <Parallax
-      bgImage={imgSrc(solution.bg)}
-      bgAlt=""
-      strength={200}
-      className="our-solutions-solution-parallax"
+    <ProgressiveImage
+      placeholder={imgSrc(solution.bg).placeholder}
+      src={imgSrc(solution.bg).src}
     >
-      <Yoga
-        maxCol={solution.logo !== undefined ? 2 : 1}
-        {...solution.overlayProps}
-        className={`our-solutions-solution-overlay ${
-          solution.bg !== undefined
-            ? 'our-solutions-solution-overlay-active'
-            : ''
-        } ${
-          solution.overlayProps && solution.overlayProps.className
-            ? solution.overlayProps.className
-            : ''
-        }`}
-      >
-        {solution.logo !== undefined ? (
-          <div className="our-solutions-solution-left" data-aos="zoom-in">
-            <Image
-              src={imgSrc(solution.logo)!}
-              size={solution.logoSize || '3XL'}
-              className="our-solutions-solution-logo"
-            />
-          </div>
-        ) : null}
-
-        <div className="our-solutions-solution-right">
-          <Block first={solution.logo !== undefined}>
-            <h1 className="our-solutions-solution-title">{solution.title}</h1>
-          </Block>
-
-          <Block last={!!solution.actions}>
-            <div className="our-solutions-solution-description">
-              {solution.description}
-            </div>
-          </Block>
-
-          <Block
-            last={!!solution.actions}
-            className="our-solutions-solution-actions"
+      {src => (
+        <Parallax
+          bgImage={src}
+          bgAlt=""
+          strength={200}
+          className="our-solutions-solution-parallax"
+        >
+          <Yoga
+            maxCol={solution.logo !== undefined ? 2 : 1}
+            {...solution.overlayProps}
+            className={`our-solutions-solution-overlay ${
+              solution.bg !== undefined
+                ? 'our-solutions-solution-overlay-active'
+                : ''
+            } ${
+              solution.overlayProps && solution.overlayProps.className
+                ? solution.overlayProps.className
+                : ''
+            }`}
           >
-            <div style={{ margin: -4 }}>
-              {solution.actions &&
-                solution.actions.map((a, i) => (
-                  <span
-                    key={i}
-                    className="inline-block"
-                    style={{ padding: 4 }}
-                    data-aos="fade-up"
-                    data-aos-delay={i * 50}
-                  >
-                    {a}
-                  </span>
-                ))}
+            {solution.logo !== undefined ? (
+              <div className="our-solutions-solution-left" data-aos="zoom-in">
+                <ProgressiveImage
+                  placeholder={imgSrc(solution.logo).placeholder}
+                  src={imgSrc(solution.logo).src}
+                >
+                  {src => (
+                    <Image
+                      src={src}
+                      size={solution.logoSize || '3XL'}
+                      className="our-solutions-solution-logo"
+                    />
+                  )}
+                </ProgressiveImage>
+              </div>
+            ) : null}
+
+            <div className="our-solutions-solution-right">
+              <Block first={solution.logo !== undefined}>
+                <h1 className="our-solutions-solution-title">
+                  {solution.title}
+                </h1>
+              </Block>
+
+              <Block last={!!solution.actions}>
+                <div className="our-solutions-solution-description">
+                  {solution.description}
+                </div>
+              </Block>
+
+              <Block
+                last={!!solution.actions}
+                className="our-solutions-solution-actions"
+              >
+                <div style={{ margin: -4 }}>
+                  {solution.actions &&
+                    solution.actions.map((a, i) => (
+                      <span
+                        key={i}
+                        className="inline-block"
+                        style={{ padding: 4 }}
+                        data-aos="fade-up"
+                        data-aos-delay={i * 50}
+                      >
+                        {a}
+                      </span>
+                    ))}
+                </div>
+              </Block>
             </div>
-          </Block>
-        </div>
-      </Yoga>
-    </Parallax>
+          </Yoga>
+        </Parallax>
+      )}
+    </ProgressiveImage>
   </div>
 )
 
