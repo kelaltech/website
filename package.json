@@ -9,7 +9,7 @@
     "node": ">= 10.16"
   },
   "scripts": {
-    "now-build": "yum -y install libjpeg-devel libpng-devel libtiff-devel libgif-devel",
+    "now-build": "yum -y install libjpeg-devel libpng-devel libtiff-devel libgif-devel && next build",
     "dev": "next dev",
     "start": "cross-env NODE_ENV=production next start",
     "build": "cross-env NODE_ENV=production next build",
