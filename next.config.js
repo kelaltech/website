@@ -10,8 +10,8 @@ const env = require('next-env')
 const css = require('@zeit/next-css')
 const sass = require('@zeit/next-sass')
 const fonts = require('next-fonts')
-// 'next-images' is needs just for the ts types in './next-env.d.ts'
 const optimizedImages = require('next-optimized-images')
+const images = require('next-images')
 const offline = require('next-offline')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
@@ -56,7 +56,7 @@ const nextConfig = {
   }
 }
 
-module.exports = config = withPlugins(
+module.exports = withPlugins(
   [
     // next-env
     env({
@@ -69,16 +69,29 @@ module.exports = config = withPlugins(
     // @zeit/next-sass
     sass,
 
+    // next-images
+    [images, {}],
+
     // next-optimized-images
     [
       optimizedImages,
       {
-        handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif', 'ico'],
+        handleImages: ['jpeg', 'png', 'webp', 'gif', 'ico'],
         optimizeImages: true,
         optimizeImagesInDev: true,
-        responsiveLoader: {
-          adapter: require('responsive-loader/sharp')
+        mozjpeg: {
+          quality: 80
         },
+        optipng: false,
+        pngquant: {
+          speed: 7,
+          quality: [0.65, 0.8]
+        },
+        gifsicle: {
+          interlaced: true,
+          optimizationLevel: 3
+        },
+        svgo: false,
         imageTrace: {
           threshold: 200
         }

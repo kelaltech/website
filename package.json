@@ -5,11 +5,7 @@
   "author": "kelal tech plc <info@kelaltech.com> (https://www.kelaltech.com)",
   "private": true,
   "license": "UNLICENSED",
-  "engines": {
-    "node": ">= 10.16"
-  },
   "scripts": {
-    "now-build": "yum -y install libjpeg-devel libpng-devel libtiff-devel libgif-devel && next build",
     "dev": "next dev",
     "start": "cross-env NODE_ENV=production next start",
     "build": "cross-env NODE_ENV=production next build",
@@ -53,9 +49,11 @@
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
+    "imagemin-pngquant": "^8.0.0",
     "imagemin-svgo": "^7.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "jest": "^24.9.0",
+    "jimp": "^0.8.5",
     "lodash": "^4.17.15",
     "lqip-loader": "^2.2.0",
     "next": "^9.1.2",
@@ -78,7 +76,6 @@
     "react-progressive-image": "^0.6.0",
     "react-router-dom": "^5.1.2",
     "responsive-loader": "^1.2.0",
-    "sharp": "^0.23.2",
     "svg-sprite-loader": "^4.1.6",
     "typescript": "^3.6.4",
     "webp-loader": "^0.5.0",
