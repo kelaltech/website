@@ -1,9 +1,5 @@
 @import '../../../../assets/styles/theme';
 
-#top {
-  position: relative;
-}
-
 .header {
   z-index: 7;
   position: sticky;
@@ -47,7 +43,7 @@
   background-position: -100% 50%;
   box-shadow: none;
   transform: scale3d(1, 1, 1);
-  transition: all 1.4s;
+  transition: background 1.4s;
 
   &:hover {
     background-color: transparentize($bg, 0.09);
@@ -74,7 +70,7 @@
   text-decoration: none !important;
   filter: grayscale(0.7) opacity(0.28);
   box-shadow: none !important;
-  transition: all 0.3s;
+  transition: filter 0.3s;
 
   &:hover {
     filter: grayscale(0) opacity(1);

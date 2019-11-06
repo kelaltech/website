@@ -6,8 +6,12 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/logo-512.png" />
         </Head>
 
         <body>

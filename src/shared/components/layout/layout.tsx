@@ -8,7 +8,6 @@ import Footer from './footer/footer'
 type ILayoutProps = PropsWithChildren<{
   error?: any
   nonContentHeight?: MinHeightProperty<string | number>
-  noShell?: boolean
   headerOptions?: IHeaderProps
   overrideHeader?: ReactNode
   overrideFooter?: ReactNode
@@ -18,25 +17,12 @@ type ILayoutProps = PropsWithChildren<{
 function Layout({
   children,
   nonContentHeight: nch,
-  noShell: noShellProp,
   error,
   headerOptions,
   overrideHeader,
   overrideFooter,
   preHeader
 }: ILayoutProps) {
-  const [noShellState, setNoShellState] = useState(true)
-
-  useEffect(() => {
-    if (noShellProp === undefined) {
-      const fromStorage = window.sessionStorage.getItem('noShell')
-      setNoShellState(fromStorage === null ? false : fromStorage === 'true')
-    } else {
-      window.sessionStorage.setItem('noShell', String(noShellProp))
-      setNoShellState(noShellProp)
-    }
-  }, [noShellProp])
-
   const contentMinHeight = nch
     ? `calc(100vh - ${nch}${typeof nch === 'number' ? 'px' : ''})`
     : `100vh`
@@ -47,16 +33,12 @@ function Layout({
     </Page>
   ) : (
     <>
-      {!noShellState && (
-        <>
-          {preHeader}
-          {overrideHeader || <Header {...headerOptions} />}
-        </>
-      )}
+      {preHeader}
+      {overrideHeader || <Header {...headerOptions} />}
 
       <div style={{ minHeight: contentMinHeight }}>{children}</div>
 
-      {!noShellState && (overrideFooter || <Footer />)}
+      {overrideFooter || <Footer />}
     </>
   )
 }

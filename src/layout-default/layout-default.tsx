@@ -13,7 +13,6 @@ function LayoutDefault({
 }: PropsWithChildren<LayoutDefaultProps>) {
   return (
     <Layout
-      noShell={false}
       preHeader={null}
       headerOptions={{ navigation: layoutLoginNavigation(undefined) }}
       error={error}
