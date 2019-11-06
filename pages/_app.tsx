@@ -7,6 +7,11 @@ import '../src/_config/config' // for the style override
 import { initGA, logPageView } from '../src/assets/scripts/google-analytics'
 import SEO from '../src/assets/configs/seo'
 
+// fontawesome config for SSR
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import * as faSvgCore from '@fortawesome/fontawesome-svg-core'
+faSvgCore.config.autoAddCss = false
+
 // AMP support
 export const config = { amp: 'hybrid' }
 
