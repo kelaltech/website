@@ -12,6 +12,14 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/logo-512.png" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              const isOperaMini = !!navigator.userAgent.match(/Opera Mini/i)
+              if (isOperaMini) document.querySelector('html').classList.add('no-aos')
+              `
+            }}
+          />
         </Head>
 
         <body>

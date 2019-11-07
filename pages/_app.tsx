@@ -18,20 +18,14 @@ export const config = { amp: 'hybrid' }
 
 class MyApp extends App {
   componentDidMount() {
-    const isOperaMini = !!navigator.userAgent.match(/Opera Mini/i)
-
-    // animate on scroll (except for Opera Mini)
-    if (isOperaMini) {
-      document.querySelector('html').classList.add('no-aos')
-    } else {
-      Aos.init({
-        anchorPlacement: 'top-bottom',
-        duration: 500,
-        easing: 'ease-out',
-        once: true,
-        offset: 0
-      })
-    }
+    // animate on scroll
+    Aos.init({
+      anchorPlacement: 'top-bottom',
+      duration: 500,
+      easing: 'ease-out',
+      once: true,
+      offset: 0
+    })
 
     // modernizr
     // todo: ??? modernizr()

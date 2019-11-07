@@ -59,13 +59,14 @@ export default function Header({
                 <>
                   <FlexSpacer />
                   {centerImage || (
-                    <Image
-                      href="#top"
-                      src={config.brand.logo.svgSrc}
-                      className="header-logo middle header-nav-max-view"
-                      title={config.brand.name}
-                      data-aos="fade-down"
-                    />
+                    <div className="inline-block" data-aos="fade-down">
+                      <Image
+                        href="#top"
+                        src={config.brand.logo.svgSrc}
+                        className="header-logo middle header-nav-max-view"
+                        title={config.brand.name}
+                      />
+                    </div>
                   )}
                   <FlexSpacer />
                 </>
