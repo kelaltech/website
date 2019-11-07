@@ -16,7 +16,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
               const isOperaMini = !!navigator.userAgent.match(/Opera Mini/i)
-              if (isOperaMini) document.querySelector('html').classList.add('no-aos')
+              if (isOperaMini) document.querySelector('html').classList.add('opera-mini')
               `
             }}
           />
