@@ -1,3 +1,11 @@
+.no-aos *[data-aos] {
+  opacity: 1;
+  transition: none;
+  transform: none;
+  filter: none;
+  visibility: visible;
+}
+
 body {
   background-image: linear-gradient(
     to top right,

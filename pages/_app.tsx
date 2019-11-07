@@ -1,6 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 import { DefaultSeo } from 'next-seo/lib'
+import * as Aos from 'aos'
 
 import '../src/assets/styles/index.scss'
 import '../src/_config/config' // for the style override
@@ -17,16 +18,20 @@ export const config = { amp: 'hybrid' }
 
 class MyApp extends App {
   componentDidMount() {
-    // todo: disable temporarily:
-    // enable by checking the browser, same for the style:
-    // animate on scroll
-    // Aos.init({
-    //   anchorPlacement: 'top-bottom',
-    //   duration: 500,
-    //   easing: 'ease-out',
-    //   once: true,
-    //   offset: 0
-    // })
+    const isOperaMini = !!navigator.userAgent.match(/Opera Mini/i)
+
+    // animate on scroll (except for Opera Mini)
+    if (isOperaMini) {
+      document.querySelector('html').classList.add('no-aos')
+    } else {
+      Aos.init({
+        anchorPlacement: 'top-bottom',
+        duration: 500,
+        easing: 'ease-out',
+        once: true,
+        offset: 0
+      })
+    }
 
     // modernizr
     // todo: ??? modernizr()
