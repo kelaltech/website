@@ -1152,10 +1152,17 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/node@^12.12.6":
+"@types/node@*", "@types/node@^12.12.6":
   version "12.12.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.6.tgz#a47240c10d86a9a57bb0c633f0b2e0aea9ce9253"
   integrity sha512-FjsYUPzEJdGXjwKqSpE0/9QEh6kzhTAeObA54rn6j3rR4C/mzpI9L0KNfoeASSPMMdxIsoJuCLDWcM/rVjIsSA==
+
+"@types/nodemailer@^6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@types/nodemailer/-/nodemailer-6.2.2.tgz#08df85c22546e9f3f3c86e5635571c5229ab43a3"
+  integrity sha512-vDbSSe3+bBXYgibKs8duOrH7bhAv1hMHl3Vtdr3KmXZWLfi5WtIg3X6D/+K4SMK1RbNlm5QZBQCOldST/sVjjg==
+  dependencies:
+    "@types/node" "*"
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -6875,6 +6882,11 @@ node-sass@^4.13.0:
     sass-graph "^2.2.4"
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
+
+nodemailer@^6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.3.1.tgz#2784beebac6b9f014c424c54dbdcc5c4d1221346"
+  integrity sha512-j0BsSyaMlyadEDEypK/F+xlne2K5m6wzPYMXS/yxKI0s7jmT1kBx6GEKRVbZmyYfKOsjkeC/TiMVDJBI/w5gMQ==
 
 noop-logger@^0.1.1:
   version "0.1.1"

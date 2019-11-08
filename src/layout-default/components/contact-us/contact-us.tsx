@@ -21,12 +21,7 @@ import Axios from 'axios'
 
 import './contact-us.scss'
 import { ContactUsProps } from './contact-us-props'
-
-export type IMessage = {
-  from: string
-  subject: string
-  text: string
-}
+import { IMessage } from '../../../../pages/api/message'
 
 function ContactUs({
   description,
@@ -49,7 +44,7 @@ function ContactUs({
 
     setStatus('SENDING')
     setError(undefined)
-    Axios.post<IMessage>(`/message/send`, msg)
+    Axios.post<IMessage>(`/message`, msg)
       .then(() => setStatus('SENT'))
       .catch(e => {
         setStatus('INITIAL')
