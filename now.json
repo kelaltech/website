@@ -15,5 +15,9 @@
       "src": "next.config.js",
       "use": "@now/next"
     }
-  ]
+  ],
+  "env": {
+    "EMAIL_FROM": "@email-from",
+    "EMAIL_PASS": "@email-pass"
+  }
 }
