@@ -10,7 +10,6 @@ const env = require('next-env')
 const css = require('@zeit/next-css')
 const sass = require('@zeit/next-sass')
 const fonts = require('next-fonts')
-const optimizedImages = require('next-optimized-images')
 const images = require('next-images')
 const offline = require('next-offline')
 const bundleAnalyzer = require('@next/bundle-analyzer')({
@@ -70,33 +69,7 @@ module.exports = withPlugins(
     sass,
 
     // next-images
-    [images, {}],
-
-    // next-optimized-images
-    [
-      optimizedImages,
-      {
-        handleImages: ['jpeg', 'png', 'webp', 'gif', 'ico'],
-        optimizeImages: true,
-        optimizeImagesInDev: true,
-        mozjpeg: {
-          quality: 80
-        },
-        optipng: false,
-        pngquant: {
-          speed: 7,
-          quality: [0.65, 0.8]
-        },
-        gifsicle: {
-          interlaced: true,
-          optimizationLevel: 3
-        },
-        svgo: false,
-        imageTrace: {
-          threshold: 200
-        }
-      }
-    ],
+    images,
 
     // next-fonts
     fonts,

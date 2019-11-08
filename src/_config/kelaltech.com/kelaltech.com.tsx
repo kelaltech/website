@@ -29,39 +29,28 @@ import { IConfigSrc } from '../config'
 import KelalWordMark from './components/kelal-word-mark/kelal-word-mark'
 
 const logoSvg: IImgSrcInput = {
-  src: require('./images/brand/logo.svg'),
-  webP: require('./images/brand/logo.svg'),
-  placeholder: require('./images/brand/logo.svg')
+  src: require('./images/brand/logo.svg')
 }
 const introBg: IImgSrcInput = {
-  src: require('./images/home/intro/intro-bg.jpg?resize').src,
-  webP: require('./images/home/intro/intro-bg.jpg?webp'),
-  placeholder: require('./images/home/intro/intro-bg.jpg?lqip').src
+  src: require('./images/home/intro/intro-bg.jpg'),
+  webP: require('./images/home/intro/intro-bg.webp')
 }
 const promosBg: IImgSrcInput = {
-  src: require('./images/home/promos/promos-bg.jpg?resize').src,
-  webP: require('./images/home/promos/promos-bg.jpg?webp'),
-  placeholder: require('./images/home/promos/promos-bg.jpg?lqip').src
+  src: require('./images/home/promos/promos-bg.jpg')
 }
 const theCompanyBg: IImgSrcInput = {
-  src: require('./images/home/the-company/the-company-bg.jpg?resize').src,
-  webP: require('./images/home/the-company/the-company-bg.jpg?webp'),
-  placeholder: require('./images/home/the-company/the-company-bg.jpg?lqip').src
+  src: require('./images/home/the-company/the-company-bg.jpg'),
+  webP: require('./images/home/the-company/the-company-bg.webp')
 }
 const kezeraBg: IImgSrcInput = {
-  src: require('./images/home/solutions/kezera/bg.jpg?resize').src,
-  webP: require('./images/home/solutions/kezera/bg.jpg?webp'),
-  placeholder: require('./images/home/solutions/kezera/bg.jpg?lqip').src
+  src: require('./images/home/solutions/kezera/bg.jpg'),
+  webP: require('./images/home/solutions/kezera/bg.webp')
 }
 const kezeraLogo: IImgSrcInput = {
-  src: require('./images/home/solutions/kezera/logo.png?resize').src,
-  webP: require('./images/home/solutions/kezera/logo.png?webp'),
-  placeholder: require('./images/home/solutions/kezera/logo.png?lqip').src
+  src: require('./images/home/solutions/kezera/logo.png')
 }
 const kezeraWordMark: IImgSrcInput = {
-  src: require('./images/home/solutions/kezera/word-mark.png?resize').src,
-  webP: require('./images/home/solutions/kezera/word-mark.png?webp'),
-  placeholder: require('./images/home/solutions/kezera/word-mark.png?lqip').src
+  src: require('./images/home/solutions/kezera/word-mark.png')
 }
 
 const config: IConfigSrc = {

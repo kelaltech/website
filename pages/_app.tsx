@@ -27,9 +27,6 @@ class MyApp extends App {
       offset: 0
     })
 
-    // modernizr
-    // todo: ??? modernizr()
-
     // google analytics
     if (!(window as any).GA_INITIALIZED) {
       initGA()
