@@ -44,7 +44,7 @@ function ContactUs({
 
     setStatus('SENDING')
     setError(undefined)
-    Axios.post<IMessage>(`/message`, msg)
+    Axios.post<IMessage>(`/api/message`, msg)
       .then(() => setStatus('SENT'))
       .catch(e => {
         setStatus('INITIAL')
