@@ -8,6 +8,8 @@ class MyDocument extends Document {
         <Head>
           <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+          <link rel="preconnect" href="https://www.google-analytics.com" />
 
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
