@@ -1,7 +1,6 @@
 import React from 'react'
 import App from 'next/app'
 import { DefaultSeo } from 'next-seo/lib'
-import * as Aos from 'aos'
 
 import '../src/assets/styles/index.scss'
 import '../src/_config/config' // for the style override
@@ -18,16 +17,17 @@ export const config = { amp: 'hybrid' }
 
 class MyApp extends App {
   componentDidMount() {
-    // animate on scroll
-    Aos.init({
-      anchorPlacement: 'top-bottom',
-      duration: 500,
-      easing: 'ease-out',
-      once: true,
-      offset: 0
-    })
-    // fix for semi-triggered aos
-    window.addEventListener('load', () => Aos.refresh())
+    // NOTE: DISABLED AOS FOR A BETTER PERFORMANCE & SEO
+    // // animate on scroll
+    // Aos.init({
+    //   anchorPlacement: 'top-bottom',
+    //   duration: 500,
+    //   easing: 'ease-out',
+    //   once: true,
+    //   offset: 0
+    // })
+    // // fix for semi-triggered aos
+    // window.addEventListener('load', () => Aos.refresh())
 
     // google analytics
     if (!(window as any).GA_INITIALIZED) {

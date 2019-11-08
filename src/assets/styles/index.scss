@@ -1,7 +1,8 @@
 @import 'theme';
 @import '~gerami/src/styles/index.scss';
 
-@import '~aos/dist/aos.css';
+// NOTE: DISABLED AOS FOR A BETTER PERFORMANCE & SEO
+// @import '~aos/dist/aos.css';
 
 @import 'fonts';
 @import 'library';
