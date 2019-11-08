@@ -6,6 +6,8 @@ export type IImgSrc = {
 
 export type IImgSrcInput = string | IImgSrc
 
+const white1x1 = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEA8ADwAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AA//Z`
+
 function imgSrc(src: IImgSrcInput = 'none'): IImgSrc | undefined {
   return typeof src === 'undefined'
     ? undefined
@@ -14,7 +16,7 @@ function imgSrc(src: IImgSrcInput = 'none'): IImgSrc | undefined {
     : {
         src: src.src,
         webP: src.webP !== undefined ? src.webP : src.src,
-        placeholder: src.placeholder !== undefined ? src.placeholder : undefined
+        placeholder: src.placeholder !== undefined ? src.placeholder : white1x1
       }
 }
 
