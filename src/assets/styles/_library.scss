@@ -1,3 +1,5 @@
+// CORE:
+
 .opera-mini *[data-aos] {
   opacity: 1;
   transition: none;
@@ -5,6 +7,16 @@
   filter: none;
   visibility: visible;
 }
+
+.react-parallax-background-children {
+  &,
+  .react-parallax-background,
+  .react-parallax-background img {
+    width: 100%;
+  }
+}
+
+// APP:
 
 body {
   background-image: linear-gradient(

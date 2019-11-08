@@ -41,8 +41,10 @@
 }
 
 .our-solutions-solution_gerami {
-  .react-parallax-bgimage {
+  .react-parallax-background {
     background-color: rgba(0, 120, 180, 0.95) !important;
+
+    transform: scale(1.5) translateY(11px);
     filter: grayscale(1) brightness(122%) !important;
   }
 }

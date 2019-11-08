@@ -22,18 +22,20 @@ function LiteParallax({
   const source = imgSrc(src)
 
   const parallax = (s: string) => (
-    <Parallax {...restAsParallaxProps}>
-      <Background>
-        <picture>
-          {src.webP !== undefined && (
-            <source srcSet={src.webP} type="image/webp" />
-          )}
-          <img src={s} alt={restAsParallaxProps.bgImageAlt || ''} />
-        </picture>
-      </Background>
+    <>
+      <Parallax {...restAsParallaxProps}>
+        <Background>
+          <picture>
+            {src.webP !== undefined && (
+              <source srcSet={src.webP} type="image/webp" />
+            )}
+            <img src={s} alt={restAsParallaxProps.bgImageAlt || ''} />
+          </picture>
+        </Background>
 
-      {children}
-    </Parallax>
+        {children}
+      </Parallax>
+    </>
   )
 
   return source === undefined ? (
