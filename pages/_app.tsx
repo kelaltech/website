@@ -27,8 +27,7 @@ class MyApp extends App {
       offset: 0
     })
     // fix for semi-triggered aos
-    window.addEventListener('DOMContentLoaded', () => Aos.refreshHard())
-    window.addEventListener('load', () => Aos.refreshHard())
+    window.addEventListener('load', () => Aos.refresh())
 
     // google analytics
     if (!(window as any).GA_INITIALIZED) {
