@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-import imgSrc, { IImgSrcInput, white1x1 } from '../../../lib/img-src'
+import imgSrc, { IImgSrcInput, placeholder1x1 } from '../../../lib/img-src'
 
 function useImgSrc(input?: IImgSrcInput): string {
   const src = imgSrc(input)
@@ -23,7 +23,7 @@ function useImgSrc(input?: IImgSrcInput): string {
     }
   }, [input])
 
-  return ret !== undefined ? ret : white1x1
+  return ret !== undefined ? ret : placeholder1x1
 }
 
 export default useImgSrc
