@@ -1,5 +1,19 @@
 @import 'theme';
 
+.gerami-button-primary {
+  border: 2px solid $primary !important;
+
+  background-color: transparent !important;
+  color: darken($primary, 7%) !important;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparentize($bg, 0.05) !important;
+    color: darken($primary, 3%) !important;
+  }
+}
+
 .gerami-input,
 .gerami-textarea,
 .gerami-input-placeholder,
@@ -19,7 +33,7 @@
 .gerami-input,
 .gerami-textarea {
   border-bottom-width: 2px !important;
-  border-bottom-color: transparent;
+  border-bottom-color: $primary;
 
   background-color: white !important;
   box-shadow: $shade-L;
