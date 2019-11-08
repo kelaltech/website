@@ -1,12 +1,11 @@
 import React, { ReactNode } from 'react'
-import { Block, Content, Image, Yoga } from 'gerami'
-import ProgressiveImage from 'react-progressive-image'
+import { Block, Content, Yoga } from 'gerami'
 
 import './our-solutions.scss'
 import { ISolution, OurSolutionsProps } from './our-solutions-props'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
-import imgSrc from '../../../lib/img-src'
+import LiteImage from '../../../shared/components/lite-image/lite-image'
 
 const renderSolution = (solution: ISolution): ReactNode => {
   const renderedSolution = (
@@ -23,22 +22,11 @@ const renderSolution = (solution: ISolution): ReactNode => {
     >
       {solution.logo !== undefined ? (
         <div className="our-solutions-solution-left" data-aos="zoom-in">
-          <ProgressiveImage
-            placeholder={
-              imgSrc(solution.logo).placeholder !== undefined
-                ? imgSrc(solution.logo).placeholder
-                : imgSrc(solution.logo).src
-            }
-            src={imgSrc(solution.logo).src}
-          >
-            {src => (
-              <Image
-                src={src}
-                size={solution.logoSize || '3XL'}
-                className="our-solutions-solution-logo"
-              />
-            )}
-          </ProgressiveImage>
+          <LiteImage
+            src={solution.logo}
+            size={solution.logoSize || '3XL'}
+            className="our-solutions-solution-logo"
+          />
         </div>
       ) : null}
 

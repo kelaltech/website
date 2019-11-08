@@ -3,13 +3,13 @@
 .gerami-button-primary {
   border: 2px solid $primary !important;
 
-  background-color: transparent !important;
+  background-color: transparentize($bg, 0.7) !important;
   color: darken($primary, 7%) !important;
 
   &:active,
   &:focus,
   &:hover {
-    background-color: transparentize($bg, 0.05) !important;
+    background-color: transparentize($bg, 0.14) !important;
     color: darken($primary, 3%) !important;
   }
 }
@@ -55,7 +55,7 @@
 }
 
 .our-solutions-solution_gerami {
-  .react-parallax-background {
+  .react-parallax-bgimage {
     background-color: rgba(0, 120, 180, 0.95) !important;
 
     filter: grayscale(1) brightness(122%) !important;

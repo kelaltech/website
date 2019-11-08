@@ -1,53 +1,28 @@
 import React, { PropsWithChildren } from 'react'
-import ProgressiveImage, {
-  ProgressiveImageProps
-} from 'react-progressive-image'
-import { Parallax, Background } from 'react-parallax'
+import { Parallax } from 'react-parallax'
 
-import imgSrc, { IImgSrcInput } from '../../../lib/img-src'
+import { IImgSrcInput } from '../../../lib/img-src'
+import useImgSrc from '../../hooks/use-img-src/use-img-src'
 
 type ReactParallaxProps = any
 
-export type LiteParallaxProps = {
-  progressiveImageProps?: ProgressiveImageProps
+export type LiteParallaxProps = Omit<ReactParallaxProps, 'bgImage'> & {
   src?: IImgSrcInput
-} & ReactParallaxProps
+}
 
 function LiteParallax({
   children,
-  progressiveImageProps,
   src,
   ...restAsParallaxProps
 }: PropsWithChildren<LiteParallaxProps>) {
-  const source = imgSrc(src)
-
-  const parallax = (s: string) => (
-    <Parallax {...restAsParallaxProps}>
-      {children}
-
-      <Background>
-        <picture>
-          {src.webP !== undefined && (
-            <source srcSet={src.webP} type="image/webp" />
-          )}
-          <img src={s} alt={restAsParallaxProps.bgImageAlt || ''} />
-        </picture>
-      </Background>
-    </Parallax>
-  )
+  const source = useImgSrc(src)
 
   return source === undefined ? (
     <>{children}</>
-  ) : source.placeholder === undefined ? (
-    parallax(source.src)
   ) : (
-    <ProgressiveImage
-      placeholder={source.placeholder}
-      src={source.src}
-      {...progressiveImageProps}
-    >
-      {s => parallax(s)}
-    </ProgressiveImage>
+    <Parallax bgImage={source} alt="" {...(restAsParallaxProps as any)}>
+      {children}
+    </Parallax>
   )
 }
 

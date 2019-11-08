@@ -8,11 +8,11 @@
   margin: 0 0 $space;
   padding: ($space * 1.5) $space;
 
-  border-left: 4px solid $accent;
+  border-left: 2px solid $accent;
 
   line-height: 2.2;
 
-  background-color: transparentize(lighten($primary, 84%), 0.5);
+  background-color: transparentize(lighten($primary, 70%), 0.7);
   box-shadow: $shade-L;
 }
 

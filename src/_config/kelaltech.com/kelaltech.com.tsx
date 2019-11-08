@@ -27,6 +27,7 @@ import { IImgSrcInput } from '../../lib/img-src'
 import { IConfigSrc } from '../config'
 
 import KelalWordMark from './components/kelal-word-mark/kelal-word-mark'
+import LiteImage from '../../shared/components/lite-image/lite-image'
 
 const logoSvg: IImgSrcInput = {
   src: require('./images/brand/logo.svg')
@@ -126,18 +127,12 @@ const config: IConfigSrc = {
             logo: kezeraLogo,
             logoSize: '6XL',
             title: (
-              <ProgressiveImage
-                placeholder={kezeraWordMark.placeholder}
-                src={kezeraWordMark.src}
-              >
-                {src => (
-                  <img
-                    src={src}
-                    alt="kezera"
-                    className="our-solutions-solution_kezera-word-mark"
-                  />
-                )}
-              </ProgressiveImage>
+              <LiteImage
+                src={kezeraWordMark}
+                alt="kezera"
+                className="our-solutions-solution_kezera-word-mark"
+                native
+              />
             ),
             description: (
               <>
