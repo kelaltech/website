@@ -9,10 +9,12 @@
 }
 
 .react-parallax-background-children {
-  &,
+  height: 114vh;
+
   .react-parallax-background,
-  .react-parallax-background img {
-    width: 100%;
+  picture,
+  img {
+    height: inherit;
   }
 }
 
