@@ -21,28 +21,32 @@ function LiteParallax({
 }: PropsWithChildren<LiteParallaxProps>) {
   const source = imgSrc(src)
 
+  const parallax = (s: string) => (
+    <Parallax {...restAsParallaxProps}>
+      <Background>
+        <picture>
+          {src.webP !== undefined && (
+            <source srcSet={src.webP} type="image/webp" />
+          )}
+          <img src={s} alt={restAsParallaxProps.bgImageAlt || ''} />
+        </picture>
+      </Background>
+
+      {children}
+    </Parallax>
+  )
+
   return source === undefined ? (
     <>{children}</>
+  ) : source.placeholder === undefined ? (
+    parallax(source.src)
   ) : (
     <ProgressiveImage
       placeholder={source.placeholder}
       src={source.src}
       {...progressiveImageProps}
     >
-      {s => (
-        <Parallax {...restAsParallaxProps}>
-          <Background>
-            <picture>
-              {src.webP !== undefined && (
-                <source srcSet={src.webP} type="image/webp" />
-              )}
-              <img src={s} alt={restAsParallaxProps.bgImageAlt || ''} />
-            </picture>
-          </Background>
-
-          {children}
-        </Parallax>
-      )}
+      {s => parallax(s)}
     </ProgressiveImage>
   )
 }

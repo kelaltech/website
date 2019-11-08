@@ -36,7 +36,9 @@ const nextConfig = {
         new CompressionPlugin({
           filename: '[path].gz[query]',
           algorithm: 'gzip',
-          test: /\.(js|css|html|json|svg|webp|png|jpg|jpeg|gif|tiff)$/,
+          test: /\.(js|css|html|json|md|svg|webp|png|jpg|jpeg|gif|tiff|ico)$/,
+          threshold: 0,
+          minRatio: 0.99,
           deleteOriginalAssets: false
         })
       )
@@ -45,7 +47,9 @@ const nextConfig = {
       config.plugins.push(
         new BrotliPlugin({
           asset: '[path].br[query]',
-          test: /\.(js|css|html|json|svg|webp|png|jpg|jpeg|gif|tiff)$/,
+          test: /\.(js|css|html|json|md|svg|webp|png|jpg|jpeg|gif|tiff|ico)$/,
+          threshold: 0,
+          minRatio: 0.99,
           deleteOriginalAssets: false
         })
       )

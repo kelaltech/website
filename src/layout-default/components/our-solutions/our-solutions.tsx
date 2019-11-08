@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react'
 import { Block, Content, Image, Yoga } from 'gerami'
-import { Parallax } from 'react-parallax'
 import ProgressiveImage from 'react-progressive-image'
 
 import './our-solutions.scss'
 import { ISolution, OurSolutionsProps } from './our-solutions-props'
-import imgSrc from '../../../lib/img-src'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
+import imgSrc from '../../../lib/img-src'
 
 const renderSolution = (solution: ISolution): ReactNode => {
   const renderedSolution = (
@@ -24,7 +24,11 @@ const renderSolution = (solution: ISolution): ReactNode => {
       {solution.logo !== undefined ? (
         <div className="our-solutions-solution-left" data-aos="zoom-in">
           <ProgressiveImage
-            placeholder={imgSrc(solution.logo).placeholder}
+            placeholder={
+              imgSrc(solution.logo).placeholder !== undefined
+                ? imgSrc(solution.logo).placeholder
+                : imgSrc(solution.logo).src
+            }
             src={imgSrc(solution.logo).src}
           >
             {src => (
@@ -75,24 +79,15 @@ const renderSolution = (solution: ISolution): ReactNode => {
   if (!solution.bg) {
     return renderedSolution
   } else {
-    const img = imgSrc(solution.bg)
     return (
       <div className={solution.className}>
-        <ProgressiveImage
-          placeholder={img.placeholder}
-          src={imgSrc(solution.bg).src}
+        <LiteParallax
+          src={solution.bg}
+          strength={200}
+          className="our-solutions-solution-parallax"
         >
-          {src => (
-            <Parallax
-              bgImage={src}
-              bgAlt=""
-              strength={200}
-              className="our-solutions-solution-parallax"
-            >
-              {renderedSolution}
-            </Parallax>
-          )}
-        </ProgressiveImage>
+          {renderedSolution}
+        </LiteParallax>
       </div>
     )
   }
