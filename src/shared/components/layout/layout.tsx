@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactNode, useEffect, useState } from 'react'
+import React, { PropsWithChildren, ReactNode } from 'react'
 import { MinHeightProperty } from 'csstype'
 import { Page, Warning } from 'gerami'
 

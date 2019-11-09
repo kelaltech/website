@@ -6,17 +6,15 @@ function useImgSrc(
   input?: IImgSrcInput,
   timeout: number | null = null
 ): string {
-  const src = imgSrc(input)
+  const source = imgSrc(input)
 
-  const [ret, setRet] = useState(src && src.placeholder)
+  const [current, setCurrent] = useState(source && source.placeholder)
 
   const applyImgSrc = () => {
-    if (src === undefined) return
+    if (source === undefined) return
 
     const webP = document.querySelector('html').classList.contains('webp')
-
-    if (webP && src.webP !== undefined) setRet(src.webP)
-    else setRet(src.src)
+    setCurrent(webP && source.webP !== undefined ? source.webP : source.src)
   }
 
   const timeoutRef = useRef<any>()
@@ -27,9 +25,9 @@ function useImgSrc(
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current)
     }
-  }, [input])
+  }, [input, timeout])
 
-  return ret !== undefined ? ret : placeholder1x1
+  return current !== undefined ? current : placeholder1x1
 }
 
 export default useImgSrc

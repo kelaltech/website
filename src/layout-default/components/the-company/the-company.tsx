@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { AccordionSlider, Block, Content, Yoga } from 'gerami'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import './the-company.scss'
 import { TheCompanyProps } from './the-company-props'
-import imgSrc from '../../../lib/img-src'
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
+import useImgSrcMulti from '../../../shared/hooks/use-img-src-multi/use-img-src-multi'
 
 function TheCompany({ bg, description, team }: TheCompanyProps) {
+  const _teamPhotos = useMemo(() => team.map(t => t.photoSrc), [team])
+  const teamPhotos = useImgSrcMulti(_teamPhotos)
+
   return (
     <LiteParallax src={bg} strength={200}>
       <div className="padding-vertical-very-big bg-blackish fg-whitish">
@@ -34,8 +37,8 @@ function TheCompany({ bg, description, team }: TheCompanyProps) {
 
                 <div className="the-company-team-slider-container bg-accent">
                   <AccordionSlider
-                    imgs={team.map(m => ({
-                      src: imgSrc(m.photoSrc).src,
+                    imgs={team.map((m, i) => ({
+                      src: teamPhotos[i],
                       caption: (
                         <>
                           <span className="block font-L font-family-display padding-top-normal">
