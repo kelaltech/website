@@ -21,7 +21,6 @@ import {
   faTelegram,
   faTwitter
 } from '@fortawesome/free-brands-svg-icons'
-import ProgressiveImage from 'react-progressive-image'
 
 import { IImgSrcInput } from '../../lib/img-src'
 import { IConfigSrc } from '../config'

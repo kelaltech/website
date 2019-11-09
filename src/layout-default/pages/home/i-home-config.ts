@@ -10,5 +10,6 @@ export type IHomeConfig = {
     | { type: 'promos'; props: PromosProps }
     | { type: 'solutions'; props: OurSolutionsProps }
     | { type: 'company'; props: TheCompanyProps }
-    | { type: 'contact'; props: ContactUsProps })[]
+    | { type: 'contact'; props: ContactUsProps }
+  )[]
 }
