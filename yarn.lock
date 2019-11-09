@@ -8608,10 +8608,10 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.11.0.tgz#b85dfecd48ad1ce469ff558a882ca8e8313928fa"
   integrity sha512-gbBVYR2p8mnriqAwWx9LbuUrShnAuSCNnuPGyc7GJrMVQtPDAh8iLpv7FRuMPFb56KkaVZIYSz1PrjI9q0QPCw==
 
-react-parallax@^3.0.0-rc2:
-  version "3.0.0-rc2"
-  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-3.0.0-rc2.tgz#4671bf6892f5a44d6573bdbac51b212a1bf5731d"
-  integrity sha512-907vfUuQ63JlKrpk2TBjg/9aDggO0JaQwpwZArNycVNHiYojq9bsZGhv6VUUiojlXa1JX57yw10A/WRFao4V7A==
+react-parallax@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-2.2.4.tgz#c02e2e550c701c82d6febbf426f288b75c9cfd95"
+  integrity sha512-HdKyD845NmaxN+zOFcGPereG59DEgCB0wXJvvOomgwISMr4tVyTlspJGviVl5JVVCER5bmG6crMkDhBkJPRZvQ==
 
 react-router-dom@^5.1.2:
   version "5.1.2"

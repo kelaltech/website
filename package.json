@@ -19,7 +19,7 @@
     "lint": "prettier ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
     "format": "prettier --write ./{*,public/**/*,src/**/*}.{ts,tsx,js,jsx,css,less,scss,json,md,html}",
     "prod": "run-p format build test",
-    "UNSAFE_upgrade": "yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @next/bundle-analyzer @types/aos @types/jest @types/node @types/nodemailer @types/qs @types/react @types/react-dom @zeit/next-css @zeit/next-sass aos axios brotli-webpack-plugin compression-webpack-plugin cross-env dotenv-load gerami husky imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant img-loader isomorphic-unfetch jest next next-compose-plugins next-env next-fonts next-images next-offline next-seo node-sass nodemailer npm-run-all optimize-css-assets-webpack-plugin prettier qs react react-dom react-ga react-parallax@next react-router-dom typescript webpack --latest"
+    "UNSAFE_upgrade": "yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @next/bundle-analyzer @types/aos @types/jest @types/node @types/nodemailer @types/qs @types/react @types/react-dom @zeit/next-css @zeit/next-sass aos axios brotli-webpack-plugin compression-webpack-plugin cross-env dotenv-load gerami husky imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant img-loader isomorphic-unfetch jest next next-compose-plugins next-env next-fonts next-images next-offline next-seo node-sass nodemailer npm-run-all optimize-css-assets-webpack-plugin prettier qs react react-dom react-ga react-parallax react-router-dom typescript webpack --latest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
@@ -67,7 +67,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-ga": "^2.7.0",
-    "react-parallax": "^3.0.0-rc2",
+    "react-parallax": "^2.2.4",
     "react-router-dom": "^5.1.2",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2"
