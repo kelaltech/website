@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import { geramiSizeTypes } from 'gerami'
-import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 import { IImgSrc } from '../../../lib/img-src'
 import { IYogaProps } from 'gerami/src/components/Yoga/Yoga'
@@ -11,9 +10,6 @@ export type OurSolutionsProps = {
   primarySolution?: ISolution
   otherSolutionsMaxPerCol?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
   otherSolutions?: ISolution[]
-
-  solutionTypesMaxPerCol?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-  solutionTypes?: ISolutionType[]
 }
 
 export type ISolution = {
@@ -25,9 +21,4 @@ export type ISolution = {
   title: string | ReactNode
   description: string | ReactNode
   actions?: ReactNode[]
-}
-
-export type ISolutionType = {
-  icon: IconProp
-  name: string | ReactNode
 }

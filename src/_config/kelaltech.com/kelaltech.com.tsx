@@ -52,6 +52,12 @@ const kezeraLogo: IImgSrcInput = {
 const kezeraWordMark: IImgSrcInput = {
   src: require('./images/home/solutions/kezera/word-mark.png')
 }
+const sunitLogo: IImgSrcInput = {
+  src: require('./images/home/partners/sun-it-logo-512.png')
+}
+const fffLogo: IImgSrcInput = {
+  src: require('./images/home/partners/3f-logo-512.png')
+}
 
 const config: IConfigSrc = {
   brand: {
@@ -253,30 +259,28 @@ const config: IConfigSrc = {
                 </a>
               ]
             }
-          ],
-
-          solutionTypesMaxPerCol: 4,
-          solutionTypes: [
+          ]
+        }
+      },
+      {
+        type: 'partners',
+        props: {
+          ourPartners: [
             {
-              icon: faGlobeAfrica,
-              name: 'We Design Simple and Complex Web Systems'
+              logo: sunitLogo,
+              name: 'Sun it solutions'
             },
             {
-              icon: faMobileAlt,
-              name: 'We Make Beautiful and Useful Mobile Apps'
+              logo: sunitLogo,
+              name: 'Dream Engineering plc'
             },
             {
-              icon: faSignal,
-              name: 'We Implement Small Network Infrastructures'
-            },
-            {
-              icon: faHandHoldingHeart,
-              name: 'We Give Back to the Open Source Community'
+              logo: fffLogo,
+              name: 'Finfine Furniture Factory'
             }
           ]
         }
       },
-
       {
         type: 'company',
         props: {
@@ -390,6 +394,24 @@ const config: IConfigSrc = {
                 { icon: faTelegram, url: 'https://t.me/kaleab14' },
                 { icon: faTwitter, url: 'https://twitter.com/kaleab14' }
               ]
+            }
+          ],
+          solutionTypes: [
+            {
+              icon: faGlobeAfrica,
+              name: 'We Design Simple and Complex Web Systems'
+            },
+            {
+              icon: faMobileAlt,
+              name: 'We Make Beautiful and Useful Mobile Apps'
+            },
+            {
+              icon: faSignal,
+              name: 'We Implement Small Network Infrastructures'
+            },
+            {
+              icon: faHandHoldingHeart,
+              name: 'We Give Back to the Open Source Community'
             }
           ]
         }

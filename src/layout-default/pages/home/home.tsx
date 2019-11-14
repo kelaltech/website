@@ -7,6 +7,7 @@ import OurSolutions from '../../components/our-solutions/our-solutions'
 import TheCompany from '../../components/the-company/the-company'
 import ContactUs from '../../components/contact-us/contact-us'
 import Head from 'next/head'
+import OurPartners from '../../components/our-partners/our-partners'
 
 function Home() {
   return !config.home ? null : (
@@ -24,6 +25,8 @@ function Home() {
             <Promos {...c.props} />
           ) : c.type === 'solutions' ? (
             <OurSolutions {...c.props} />
+          ) : c.type === 'partners' ? (
+            <OurPartners {...c.props} />
           ) : c.type === 'company' ? (
             <TheCompany {...c.props} />
           ) : c.type === 'contact' ? (

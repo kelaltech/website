@@ -3,7 +3,6 @@ import { Block, Content, Yoga } from 'gerami'
 
 import './our-solutions.scss'
 import { ISolution, OurSolutionsProps } from './our-solutions-props'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
 import LiteImage from '../../../shared/components/lite-image/lite-image'
 
@@ -86,10 +85,7 @@ function OurSolutions({
 
   primarySolution,
   otherSolutionsMaxPerCol = 2,
-  otherSolutions,
-
-  solutionTypesMaxPerCol = 4,
-  solutionTypes
+  otherSolutions
 }: OurSolutionsProps) {
   return (
     <div className="our-solutions padding-vertical-very-big">
@@ -130,43 +126,6 @@ function OurSolutions({
           </Block>
         )}
       </Content>
-
-      {solutionTypes && !!solutionTypes.length && (
-        <div className="our-solutions-solution-types">
-          <Content
-            size="3XL"
-            transparent
-            className="our-solutions-solution-types-wrapper"
-          >
-            <Block last>
-              <Yoga maxCol={solutionTypesMaxPerCol}>
-                {solutionTypes.map((st, i) => (
-                  <Content
-                    key={i}
-                    className="our-solutions-solution-type"
-                    data-aos="fade-up"
-                    data-aos-delay={i * 50}
-                  >
-                    <Block
-                      first
-                      className="our-solutions-solution-type-icon-container"
-                    >
-                      <FontAwesomeIcon
-                        icon={st.icon}
-                        size="4x"
-                        className="our-solutions-solution-type-icon margin-top-very-big margin-bottom-big fg-accent"
-                      />
-                    </Block>
-                    <Block last className="our-solutions-solution-type-name">
-                      {st.name}
-                    </Block>
-                  </Content>
-                ))}
-              </Yoga>
-            </Block>
-          </Content>
-        </div>
-      )}
     </div>
   )
 }

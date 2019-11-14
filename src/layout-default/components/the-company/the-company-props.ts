@@ -14,4 +14,10 @@ export type TheCompanyProps = {
       url: string
     }[]
   }[]
+  solutionTypes?: ISolutionType[]
+  solutionTypesMaxPerCol?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+}
+export type ISolutionType = {
+  icon: IconProp
+  name: string | ReactNode
 }
