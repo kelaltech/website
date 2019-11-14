@@ -87,7 +87,7 @@ module.exports = withPlugins(
           runtimeCaching: [
             {
               urlPattern: /^https?.*/,
-              handler: 'CacheFirst'
+              handler: 'NetworkFirst'
             },
             {
               urlPattern: /(\/service-worker.js$)|(\/api\/)/,
