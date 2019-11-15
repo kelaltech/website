@@ -32,7 +32,7 @@ function TheCompany({
             </Block>
 
             {team && !!team.length && (
-              <Block className="bg-blackish" data-aos="fade-up">
+              <Block data-aos="fade-up">
                 <Yoga maxCol={2}>
                   <div className="center padding-top-very-big font-L font-family-display">
                     <span>Meet the Team</span>
@@ -75,45 +75,49 @@ function TheCompany({
                 </Yoga>
               </Block>
             )}
+
+            {solutionTypes && !!solutionTypes.length && (
+              <div className="our-solutions-solution-types  ">
+                <Content
+                  size="3XL"
+                  transparent
+                  className="our-solutions-solution-types-wrapper"
+                >
+                  <Block last>
+                    <Yoga maxCol={solutionTypesMaxPerCol}>
+                      {solutionTypes.map((st, i) => (
+                        <Content
+                          key={i}
+                          className="our-solutions-solution-type bg-blackish fg-whitish"
+                          data-aos="fade-up"
+                          data-aos-delay={i * 50}
+                        >
+                          <Block
+                            first
+                            className="our-solutions-solution-type-icon-container"
+                          >
+                            <FontAwesomeIcon
+                              icon={st.icon}
+                              size="4x"
+                              className="our-solutions-solution-type-icon margin-top-very-big margin-bottom-big "
+                            />
+                          </Block>
+                          <Block
+                            last
+                            className="our-solutions-solution-type-name"
+                          >
+                            {st.name}
+                          </Block>
+                        </Content>
+                      ))}
+                    </Yoga>
+                  </Block>
+                </Content>
+              </div>
+            )}
           </Content>
         </div>
       </LiteParallax>
-      {solutionTypes && !!solutionTypes.length && (
-        <div className="our-solutions-solution-types">
-          <Content
-            size="3XL"
-            transparent
-            className="our-solutions-solution-types-wrapper"
-          >
-            <Block last>
-              <Yoga maxCol={solutionTypesMaxPerCol}>
-                {solutionTypes.map((st, i) => (
-                  <Content
-                    key={i}
-                    className="our-solutions-solution-type"
-                    data-aos="fade-up"
-                    data-aos-delay={i * 50}
-                  >
-                    <Block
-                      first
-                      className="our-solutions-solution-type-icon-container"
-                    >
-                      <FontAwesomeIcon
-                        icon={st.icon}
-                        size="4x"
-                        className="our-solutions-solution-type-icon margin-top-very-big margin-bottom-big fg-accent"
-                      />
-                    </Block>
-                    <Block last className="our-solutions-solution-type-name">
-                      {st.name}
-                    </Block>
-                  </Content>
-                ))}
-              </Yoga>
-            </Block>
-          </Content>
-        </div>
-      )}
     </>
   )
 }

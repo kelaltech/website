@@ -24,20 +24,14 @@
 }
 
 .our-solutions-solution-types {
-  margin-top: $space * 9;
-  padding-top: $space * 9;
   padding-bottom: 0;
-
-  background-color: $primary;
 }
 
 .our-solutions-solution-types-wrapper {
-  margin-top: -$space * 18;
 }
 
 .our-solutions-solution-type {
   border-top: 2px solid transparentize($accent, 0.05);
-
   text-align: center;
 }
 
@@ -45,6 +39,7 @@
 }
 
 .our-solutions-solution-type-icon {
+  color: white !important;
 }
 
 .our-solutions-solution-type-name {

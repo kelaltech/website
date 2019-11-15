@@ -7,7 +7,7 @@ import LiteImage from '../../../shared/components/lite-image/lite-image'
 
 function OurPartners({ ourPartners }: OurPartnersProps) {
   return (
-    <div className={'our-partners-container'}>
+    <div className={'our-partners-container margin-top-very-big'}>
       <Content size="3XL" transparent data-aos="fade-up">
         <Block first last>
           <Yoga maxCol={3}>
