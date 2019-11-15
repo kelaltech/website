@@ -59,6 +59,10 @@ const fffLogo: IImgSrcInput = {
   src: require('./images/home/partners/3f-logo-512.png')
 }
 
+const dreamLogo: IImgSrcInput = {
+  src: require('./images/home/partners/dream-logo-512.png')
+}
+
 const config: IConfigSrc = {
   brand: {
     logo: {
@@ -271,7 +275,7 @@ const config: IConfigSrc = {
               name: 'Sun it solutions'
             },
             {
-              logo: sunitLogo,
+              logo: dreamLogo,
               name: 'Dream Engineering plc'
             },
             {

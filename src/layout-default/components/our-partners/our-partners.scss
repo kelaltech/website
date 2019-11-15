@@ -1,16 +1,8 @@
 @import '../../../assets/styles/theme';
 
+.our-partners-container {
+  background-color: $primary !important;
+}
 .partners-logo-box {
-  img {
-    width: 100px;
-    height: 100px;
-  }
   text-align: center;
-  filter: grayscale(1);
-  transition: 0.5s filter;
-
-  &:hover {
-    filter: grayscale(0);
-    cursor: pointer;
-  }
 }
