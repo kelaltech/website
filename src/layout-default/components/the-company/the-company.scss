@@ -23,24 +23,24 @@
   font-size: $font-L;
 }
 
-.our-solutions-solution-types {
+.the-company-solution-types {
   padding-bottom: 0;
 }
 
-.our-solutions-solution-types-wrapper {
+.the-company-solution-types-wrapper {
 }
 
-.our-solutions-solution-type {
+.the-company-solution-type {
   border-top: 2px solid transparentize($accent, 0.05);
+
   text-align: center;
+
+  background-color: transparentize(lighten($fg, 28%), 0.42);
 }
 
-.our-solutions-solution-type-icon-container {
+.the-company-solution-type-icon-container {
 }
 
-.our-solutions-solution-type-icon {
+.the-company-solution-type-icon {
   color: white !important;
-}
-
-.our-solutions-solution-type-name {
 }

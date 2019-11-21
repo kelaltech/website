@@ -269,7 +269,7 @@ const config: IConfigSrc = {
       {
         type: 'partners',
         props: {
-          ourPartners: [
+          partners: [
             {
               logo: sunitLogo,
               name: 'Sun it solutions'

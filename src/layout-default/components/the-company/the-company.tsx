@@ -27,9 +27,7 @@ function TheCompany({
               <h1>The Company</h1>
             </Block>
 
-            <Block last className="fg-whitish">
-              {description}
-            </Block>
+            <Block className="fg-whitish">{description}</Block>
 
             {team && !!team.length && (
               <Block data-aos="fade-up">
@@ -77,34 +75,34 @@ function TheCompany({
             )}
 
             {solutionTypes && !!solutionTypes.length && (
-              <div className="our-solutions-solution-types  ">
+              <div className="the-company-solution-types">
                 <Content
                   size="3XL"
                   transparent
-                  className="our-solutions-solution-types-wrapper"
+                  className="the-company-solution-types-wrapper"
                 >
                   <Block last>
                     <Yoga maxCol={solutionTypesMaxPerCol}>
                       {solutionTypes.map((st, i) => (
                         <Content
                           key={i}
-                          className="our-solutions-solution-type bg-blackish fg-whitish"
+                          className="the-company-solution-type fg-whitish"
                           data-aos="fade-up"
                           data-aos-delay={i * 50}
                         >
                           <Block
                             first
-                            className="our-solutions-solution-type-icon-container"
+                            className="the-company-solution-type-icon-container"
                           >
                             <FontAwesomeIcon
                               icon={st.icon}
                               size="4x"
-                              className="our-solutions-solution-type-icon margin-top-very-big margin-bottom-big "
+                              className="the-company-solution-type-icon margin-top-very-big margin-bottom-big "
                             />
                           </Block>
                           <Block
                             last
-                            className="our-solutions-solution-type-name"
+                            className="the-company-solution-type-name"
                           >
                             {st.name}
                           </Block>

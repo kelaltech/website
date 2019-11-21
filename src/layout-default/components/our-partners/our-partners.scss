@@ -2,7 +2,12 @@
 
 .our-partners-container {
   background-color: $primary !important;
+
+  padding: $space 0;
 }
-.partners-logo-box {
+
+.our-partners-logo-box {
+  margin: $space;
+
   text-align: center;
 }

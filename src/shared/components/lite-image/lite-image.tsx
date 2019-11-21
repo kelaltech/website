@@ -15,9 +15,9 @@ function LiteImage({ src, native, ...restAsImageProps }: LiteParallaxProps) {
   const source = useImgSrc(src)
 
   return source === undefined ? null : native ? (
-    <img src={source} {...(restAsImageProps as any)} />
+    <img src={source} alt="" {...(restAsImageProps as any)} />
   ) : (
-    <Image src={source} {...(restAsImageProps as any)} />
+    <Image src={source} alt="" {...(restAsImageProps as any)} />
   )
 }
 
