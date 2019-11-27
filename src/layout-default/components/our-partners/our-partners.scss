@@ -1,9 +1,11 @@
 @import '../../../assets/styles/theme';
 
 .our-partners-container {
-  background-color: $primary !important;
-
   padding: $space 0;
+
+  overflow-x: hidden;
+
+  background-color: $primary !important;
 }
 
 .our-partners-logo-box {
