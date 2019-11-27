@@ -11,5 +11,7 @@
 }
 
 .promos-promo {
-  border-top: 2px solid transparentize($accent, 0.05);
+  border-top: 2px solid transparentize($primary, 0.05);
+
+  background-color: transparentize($bg, 0.14);
 }

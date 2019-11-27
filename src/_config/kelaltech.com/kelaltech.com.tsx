@@ -95,7 +95,7 @@ const config: IConfigSrc = {
               icon: faAward,
               label: (
                 <>
-                  We Deliver <span className="fg-white">Excellence</span>!
+                  We Deliver <span className="fg-primary">Excellence!</span>
                 </>
               )
             },
@@ -103,7 +103,7 @@ const config: IConfigSrc = {
               icon: faHandshake,
               label: (
                 <>
-                  We Love <span className="fg-white">Partnerships</span>!
+                  We Love <span className="fg-primary">Partnerships!</span>
                 </>
               )
             },
@@ -111,7 +111,7 @@ const config: IConfigSrc = {
               icon: faChartLine,
               label: (
                 <>
-                  We Help You <span className="fg-white">Grow Bigger</span>!
+                  We Help You <span className="fg-primary">Grow Bigger!</span>
                 </>
               )
             }

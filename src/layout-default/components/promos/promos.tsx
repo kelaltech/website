@@ -21,16 +21,16 @@ function Promos({ bg, maxPromoPerColumn = 3, promos }: PromosProps) {
                     data-aos="fade-up"
                     data-aos-delay={i * 50}
                   >
-                    <Content className="promos-promo bg-blackish fg-whitish center">
+                    <Content className="promos-promo fg-blackish center">
                       <Block first>
                         <FontAwesomeIcon
                           icon={p.icon}
-                          size="4x"
-                          className="margin-top-very-big margin-bottom-big fg-accent"
+                          size="5x"
+                          className="margin-top-big margin-bottom-normal fg-primary"
                         />
                       </Block>
                       <Block last>
-                        <h3 className="light">{p.label}</h3>
+                        <h4>{p.label}</h4>
                       </Block>
                     </Content>
                   </div>
