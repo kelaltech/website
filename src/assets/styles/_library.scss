@@ -10,6 +10,13 @@
   visibility: visible;
 }
 
+.fg-blackish {
+  color: transparentize($fg, 0.42) !important;
+}
+.fg-whitish {
+  color: transparentize($bg, 0.49) !important;
+}
+
 // APP:
 
 body {

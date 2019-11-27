@@ -3,10 +3,10 @@
 .footer {
   background-image: linear-gradient(
     to bottom,
-    transparentize($fg, 0.98) 0%,
-    transparent 70%
+    transparentize($primary, 0.98) 0%,
+    transparent 90%
   );
-  box-shadow: $inset-shade-L;
+  box-shadow: $inset-shade-S;
 }
 
 .footer-left,
@@ -14,7 +14,7 @@
   width: 60px;
 
   a {
-    color: transparentize($fg, 0.42);
+    color: inherit;
   }
 }
 

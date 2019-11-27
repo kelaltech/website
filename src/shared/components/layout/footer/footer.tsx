@@ -6,7 +6,7 @@ import config from '../../../../_config/config'
 
 export default function Footer() {
   return (
-    <Block first last className="footer font-S fg-blackish">
+    <Block first last className="footer font-S bg-blackish fg-whitish">
       <Flex>
         <div className="footer-left">
           {/* THIS IS THE LEFT SIDE OF THE FOOTER */}

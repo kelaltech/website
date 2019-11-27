@@ -55,8 +55,8 @@ function ContactUs({
   }
 
   return (
-    <LiteParallax src={bg} strength={300}>
-      <div className="bg-whitish padding-vertical-very-big">
+    <LiteParallax src={bg} strength={300} className="bg-accent">
+      <div className="bg-white padding-vertical-very-big">
         <Content size="3XL" transparent data-aos="fade-up">
           <Block first>
             <h1>Contact Us</h1>
