@@ -2,6 +2,11 @@
 
 // CORE:
 
+.gerami-yoga {
+  // to manage the effects of .gerami-yoga-anti-space's negative horizontal margins:
+  overflow-x: hidden; // todo: move to gerami v0.1.7
+}
+
 .opera-mini *[data-aos] {
   opacity: 1;
   transition: none;
