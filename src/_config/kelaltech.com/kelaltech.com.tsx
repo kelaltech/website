@@ -424,6 +424,7 @@ const config: IConfigSrc = {
       {
         type: 'contact',
         props: {
+          bg: logoSvg,
           description: (
             <>
               Want to make a deal with us? Want to help us improve something?
