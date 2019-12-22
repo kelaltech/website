@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import {
   Block,
   Button,
@@ -22,10 +22,10 @@ import Axios from 'axios'
 import './contact-us.scss'
 import { ContactUsProps } from './contact-us-props'
 import { IMessage } from '../../../../pages/api/message'
-import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
+// todo: import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
 
 function ContactUs({
-  bg,
+  // todo: bg,
   description,
 
   phones,
@@ -35,6 +35,8 @@ function ContactUs({
 
   messageSubmitApiPath
 }: ContactUsProps) {
+  const actionPath = useMemo(() => '/api/message', [])
+
   const [msg, setMsg] = useState<IMessage>({ from: '', subject: '', text: '' })
   const [status, setStatus] = useState<'INITIAL' | 'SENDING' | 'SENT'>(
     'INITIAL'
@@ -46,7 +48,7 @@ function ContactUs({
 
     setStatus('SENDING')
     setError(undefined)
-    Axios.post<IMessage>(`/api/message`, msg)
+    Axios.post<IMessage>(actionPath, msg)
       .then(() => setStatus('SENT'))
       .catch(e => {
         setStatus('INITIAL')
@@ -55,8 +57,10 @@ function ContactUs({
   }
 
   return (
-    <LiteParallax src={bg} strength={300} className="bg-accent">
-      <div className="bg-white padding-vertical-very-big">
+    <>
+      {/*<LiteParallax src={bg} strength={300} className="bg-accent">*/}
+
+      <div className="padding-vertical-very-big">
         <Content size="3XL" transparent data-aos="fade-up">
           <Block first>
             <h1>Contact Us</h1>
@@ -176,7 +180,11 @@ function ContactUs({
                     className="contact-us-icon margin-top-small"
                   />
                   <div className="contact-us-label">
-                    <form method="POST" onSubmit={handleSubmit}>
+                    <form
+                      method="POST"
+                      action={actionPath}
+                      onSubmit={handleSubmit}
+                    >
                       <h3>Let's Have a Chat</h3>
 
                       {error && (
@@ -197,13 +205,13 @@ function ContactUs({
                         <>
                           <div>
                             <Input
+                              name="email"
                               value={msg.from}
                               onChange={e =>
                                 setMsg({ ...msg, from: e.target.value })
                               }
-                              name="email"
-                              placeholder={'Your Email'}
-                              type={'email'}
+                              placeholder="Your Email"
+                              type="email"
                               className="contact-us-send-message-input"
                               disabled={status === 'SENDING'}
                               required
@@ -212,11 +220,13 @@ function ContactUs({
 
                           <div>
                             <Input
+                              name="subject"
                               value={msg.subject}
                               onChange={e =>
                                 setMsg({ ...msg, subject: e.target.value })
                               }
-                              placeholder={'Subject'}
+                              placeholder="Subject"
+                              type="text"
                               className="contact-us-send-message-input"
                               disabled={status === 'SENDING'}
                               required
@@ -225,15 +235,16 @@ function ContactUs({
 
                           <div>
                             <TextArea
+                              name="text"
                               value={msg.text}
                               onChange={e =>
                                 setMsg({ ...msg, text: e.target.value })
                               }
-                              placeholder={'Your Message'}
+                              placeholder="Your Message"
                               className="contact-us-send-message-input"
-                              rows={7}
                               disabled={status === 'SENDING'}
                               required
+                              rows={7}
                             />
                           </div>
 
@@ -262,7 +273,8 @@ function ContactUs({
           </Block>
         </Content>
       </div>
-    </LiteParallax>
+      {/*</LiteParallax>*/}
+    </>
   )
 }
 
