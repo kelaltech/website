@@ -5,10 +5,10 @@ import './our-partners.scss'
 import { OurPartnersProps } from './our-partners-props'
 import LiteImage from '../../../shared/components/lite-image/lite-image'
 
-function OurPartners({ partners }: OurPartnersProps) {
+function OurPartners({ maxPerCol = 4, partners }: OurPartnersProps) {
   return (
     <div className="our-partners-container margin-top-very-big">
-      <Yoga size="3XL" maxCol={3} data-aos="fade-up">
+      <Yoga size="3XL" maxCol={maxPerCol} data-aos="fade-up">
         {partners.map((partner, i) => (
           <div className="our-partners-logo-box" key={i}>
             <LiteImage

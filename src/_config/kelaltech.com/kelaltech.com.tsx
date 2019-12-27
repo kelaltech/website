@@ -52,15 +52,21 @@ const kezeraLogo: IImgSrcInput = {
 const kezeraWordMark: IImgSrcInput = {
   src: require('./images/home/solutions/kezera/word-mark.png')
 }
-const sunitLogo: IImgSrcInput = {
-  src: require('./images/home/partners/sun-it-logo-512.png')
-}
 const fffLogo: IImgSrcInput = {
-  src: require('./images/home/partners/3f-logo-512.png')
+  src: require('./images/home/our-partners/3f.png'),
+  webP: require('./images/home/our-partners/3f.webp')
 }
-
 const dreamLogo: IImgSrcInput = {
-  src: require('./images/home/partners/dream-logo-512.png')
+  src: require('./images/home/our-partners/dream.png'),
+  webP: require('./images/home/our-partners/dream.webp')
+}
+const hadidLogo: IImgSrcInput = {
+  src: require('./images/home/our-partners/hadid.png'),
+  webP: require('./images/home/our-partners/hadid.webp')
+}
+const sunItLogo: IImgSrcInput = {
+  src: require('./images/home/our-partners/sun-it.png'),
+  webP: require('./images/home/our-partners/sun-it.webp')
 }
 
 const config: IConfigSrc = {
@@ -269,18 +275,23 @@ const config: IConfigSrc = {
       {
         type: 'partners',
         props: {
+          maxPerCol: 4,
           partners: [
             {
-              logo: sunitLogo,
-              name: 'Sun it solutions'
+              logo: fffLogo,
+              name: '(3F) Finfine Furniture Factory PLC'
             },
             {
               logo: dreamLogo,
-              name: 'Dream Engineering plc'
+              name: 'Dream Engineering PLC'
             },
             {
-              logo: fffLogo,
-              name: 'Finfine Furniture Factory'
+              logo: hadidLogo,
+              name: 'Hadid Marketing and Promotion'
+            },
+            {
+              logo: sunItLogo,
+              name: 'Sun IT Solutions PLC'
             }
           ]
         }
