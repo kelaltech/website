@@ -446,11 +446,31 @@ const config: IConfigSrc = {
             }
           ],
           socials: [
-            { icon: faLinkedin, url: 'https://www.linkedin.com/company/kelal' },
-            { icon: faTelegram, url: 'https://t.me/kelalTech' },
-            { icon: faTwitter, url: 'https://twitter.com/kelaltech' },
-            { icon: faInstagram, url: 'https://instagram.com/kelaltech' },
-            { icon: faFacebook, url: 'https://www.facebook.com/kelaltech' }
+            {
+              icon: faLinkedin,
+              url: 'https://www.linkedin.com/company/kelal',
+              title: 'LinkedIn Company Profile /company/kelal'
+            },
+            {
+              icon: faTelegram,
+              url: 'https://t.me/kelalTech',
+              title: 'Telegram Channel @kelalTech'
+            },
+            {
+              icon: faTwitter,
+              url: 'https://twitter.com/kelaltech',
+              title: 'Twitter @kelaltech'
+            },
+            {
+              icon: faInstagram,
+              url: 'https://instagram.com/kelaltech',
+              title: 'Instagram @kelaltech'
+            },
+            {
+              icon: faFacebook,
+              url: 'https://www.facebook.com/kelaltech',
+              title: 'Facebook Page @kelaltech'
+            }
           ],
 
           messageSubmitApiPath: '/api/message/send'

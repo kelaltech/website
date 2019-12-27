@@ -6,7 +6,7 @@ export default {
     'We Empower Creators. Through Digital Platforms. | We are an Ethiopian-based IT company working on software and hardware solutions for creative businesses.',
   additionalMetaTags: [
     { name: 'author', content: 'kelal tech plc' },
-    { name: 'copyright', content: '2019 © kelal tech plc' },
+    { name: 'copyright', content: '2020 © kelal tech plc' },
     {
       name: 'keywords',
       content:

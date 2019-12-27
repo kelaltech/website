@@ -2,6 +2,14 @@
 
 .our-solutions {
   padding-bottom: 0 !important;
+
+  background-color: rgba(255, 255, 255, 0.84);
+  background-image: linear-gradient(
+      to top right,
+      transparentize($primary, 0.93),
+      transparent
+    ),
+    linear-gradient(to top, transparent -30%, $bg);
 }
 
 .our-solutions-primary-solution {

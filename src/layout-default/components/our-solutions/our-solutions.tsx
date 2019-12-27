@@ -95,7 +95,7 @@ function OurSolutions({
         </Block>
 
         {description && (
-          <Block last className="fg-blackish font-S italic justify">
+          <Block last className="fg-blackish fg-blackish justify">
             {description}
           </Block>
         )}

@@ -11,10 +11,10 @@
 }
 
 .fg-blackish {
-  color: transparentize($fg, 0.42) !important;
+  color: transparentize(black, 0.35) !important;
 }
 .fg-whitish {
-  color: transparentize($bg, 0.49) !important;
+  color: transparentize(white, 0.28) !important;
 }
 
 // APP:

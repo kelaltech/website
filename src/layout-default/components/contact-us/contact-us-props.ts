@@ -10,7 +10,7 @@ export type ContactUsProps = {
   phones?: string[]
   emails?: string[]
   addresses?: { name: string; url: string }[]
-  socials?: { icon: IconProp; url: string }[]
+  socials?: { icon: IconProp; url: string; title: string }[]
 
   messageSubmitApiPath?: string
 }
