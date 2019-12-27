@@ -66,7 +66,7 @@ function ContactUs({
             </Block>
 
             {description && (
-              <Block last className="fg-blackish fg-blackish justify">
+              <Block last className="fg-blackish justify">
                 {description}
               </Block>
             )}

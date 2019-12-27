@@ -294,16 +294,12 @@ const config: IConfigSrc = {
               <p>
                 <span>
                   We are a software development company that provides the best
-                  IT solutions based on your business needs. Companies like us
-                  are the core for a country that is advancing fast into the
+                  IT solutions based on your business needs. Institutions like
+                  us are the core of a country that is advancing fast into the
                   tech industry; steps taken into the digital world is
-                  inevitable.{' '}
-                </span>
-                <strong>kelal tech.</strong>
-                <span>
-                  {' '}
-                  will be with you on this journey: guiding, consulting and
-                  building your company with the latest and modern technologies.
+                  inevitable. Our company, kelal tech plc, will be with you on
+                  this journey: guiding, consulting and building your company
+                  with the latest and modern technologies.
                 </span>
               </p>
             </>

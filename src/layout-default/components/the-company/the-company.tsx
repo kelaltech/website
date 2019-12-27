@@ -27,7 +27,7 @@ function TheCompany({
               <h1>The Company</h1>
             </Block>
 
-            <Block className="fg-whitish">{description}</Block>
+            <Block className="fg-whitish justify">{description}</Block>
 
             {team && !!team.length && (
               <Block data-aos="fade-up">
