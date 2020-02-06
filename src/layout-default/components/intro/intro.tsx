@@ -3,7 +3,7 @@ import { Button, Image } from 'gerami'
 
 import './intro.scss'
 import { IntroProps } from './intro-props'
-import config from '../../../_config/config'
+import config from '../../../data/config'
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
 
 function Intro({ bg, displayTitle, displaySubtitle }: IntroProps) {

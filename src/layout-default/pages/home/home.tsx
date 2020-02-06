@@ -1,6 +1,6 @@
 import React from 'react'
 
-import config from '../../../_config/config'
+import config from '../../../data/config'
 import Intro from '../../components/intro/intro'
 import Promos from '../../components/promos/promos'
 import OurSolutions from '../../components/our-solutions/our-solutions'

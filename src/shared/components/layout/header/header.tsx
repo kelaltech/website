@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import './header.scss'
-import config from '../../../../_config/config'
+import config from '../../../../data/config'
 import { INavigationItem } from './interfaces'
 
 export interface IHeaderProps {

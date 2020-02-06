@@ -4,7 +4,7 @@ import './kelaltech.com/styles/index.scss'
 // (2) edit config src & the file
 import config from './kelaltech.com/kelaltech.com'
 
-// (3) edit /_config/theme-src.scss
+// (3) edit /data/theme-src.scss
 
 // (4) edit /.env
 

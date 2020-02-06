@@ -2,7 +2,7 @@ import React from 'react'
 import { Block, Flex, FlexSpacer } from 'gerami'
 
 import './footer.scss'
-import config from '../../../../_config/config'
+import config from '../../../../data/config'
 
 export default function Footer() {
   return (

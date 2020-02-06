@@ -3,7 +3,7 @@ import App from 'next/app'
 import { DefaultSeo } from 'next-seo/lib'
 
 import '../src/assets/styles/index.scss'
-import '../src/_config/config' // for the style override
+import '../src/data/config' // for the style override
 import { initGA, logPageView } from '../src/assets/scripts/google-analytics'
 import SEO from '../src/assets/configs/seo'
 

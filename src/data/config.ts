@@ -1,7 +1,8 @@
-import configSrc from './config-src'
-
-import { IHomeConfig } from '../layout-default/pages/home/i-home-config'
 import { ReactNode } from 'react'
+
+import data from './data.json'
+import configSrc from './config-src'
+import { IHomeConfig } from '../layout-default/pages/home/i-home-config'
 
 type IConfigFromEnv = {
   brand: {
@@ -30,14 +31,12 @@ export type IConfig = IConfigFromEnv & IConfigSrc
 
 const configFromEnv: IConfigFromEnv = {
   brand: {
-    name: process.env.REACT_APP_NAME || '',
-    shortName: process.env.REACT_APP_SHORT_NAME || '',
-    description: process.env.REACT_APP_DESCRIPTION || '',
-    keywords: (process.env.REACT_APP_KEYWORDS || '')
-      .split(',')
-      .map(keyword => keyword.trim()),
-    copyright: process.env.REACT_APP_COPYRIGHT || '',
-    varName: process.env.REACT_APP_VAR_NAME || ''
+    name: data.NAME || '',
+    shortName: data.SHORT_NAME || '',
+    description: data.DESCRIPTION || '',
+    keywords: (data.KEYWORDS || '').split(',').map(keyword => keyword.trim()),
+    copyright: data.COPYRIGHT || '',
+    varName: data.VAR_NAME || ''
   }
 }
 const config: IConfig = Object.assign({

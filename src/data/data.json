@@ -1,0 +1,17 @@
+{
+  "API_ORIGIN": "https://ktdc-api.herokuapp.com",
+  "WEB_ORIGIN": "https://www.kelaltech.com",
+
+  "NAME": "kelal tech plc",
+  "SHORT_NAME": "kelal tech.",
+  "DESCRIPTION": "We Empower Creators. Through Digital Platforms. | We are an Ethiopia-based IT company working on software and hardware solutions for creative businesses.",
+  "THEME_COLOR": "#00b478",
+
+  "INITIAL_TITLE": "Empower Creators! – Official Website | kelal tech plc",
+  "KEYWORDS": "kelal tech plc,kelal tech.,kelal,kelaltech,empower creators,digital platforms,ethiopia,addis ababa,information technology,software,official company website",
+  "COPYRIGHT": "2020 © kelal tech plc",
+
+  "VAR_NAME": "kelaltech",
+
+  "TWITTER_HANDLE": "@kelaltech"
+}
