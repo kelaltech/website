@@ -63,7 +63,7 @@ module.exports = withPlugins(
   [
     // next-env
     env({
-      staticPrefix: ''
+      staticPrefix: 'REACT_APP_'
     }),
 
     // @zeit/next-css
