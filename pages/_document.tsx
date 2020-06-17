@@ -60,9 +60,7 @@ class MyDocument extends Document {
             }}
           />
           
-          <!-- Start of HubSpot Embed Code -->
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7931519.js"></script>
-          <!-- End of HubSpot Embed Code -->
+          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7931519.js" />
         </Head>
 
         <body>
