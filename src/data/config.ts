@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
-import data from './data.json'
-import configSrc from './config-src'
 import { IHomeConfig } from '../layout-default/pages/home/i-home-config'
+import configSrc from './config-src'
+import data from './data.json'
 
 type IConfigFromEnv = {
   brand: {

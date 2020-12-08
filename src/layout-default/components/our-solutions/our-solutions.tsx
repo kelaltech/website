@@ -1,10 +1,10 @@
-import React, { ReactNode } from 'react'
 import { Block, Content, Yoga } from 'gerami'
+import React, { ReactNode } from 'react'
 
-import './our-solutions.scss'
-import { ISolution, OurSolutionsProps } from './our-solutions-props'
-import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
 import LiteImage from '../../../shared/components/lite-image/lite-image'
+import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
+import { ISolution, OurSolutionsProps } from './our-solutions-props'
+import './our-solutions.scss'
 
 const renderSolution = (solution: ISolution): ReactNode => {
   const renderedSolution = (

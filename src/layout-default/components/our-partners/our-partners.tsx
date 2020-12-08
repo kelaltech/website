@@ -1,9 +1,9 @@
-import React from 'react'
 import { Yoga } from 'gerami'
+import React from 'react'
 
-import './our-partners.scss'
-import { OurPartnersProps } from './our-partners-props'
 import LiteImage from '../../../shared/components/lite-image/lite-image'
+import { OurPartnersProps } from './our-partners-props'
+import './our-partners.scss'
 
 function OurPartners({ maxPerCol = 4, partners }: OurPartnersProps) {
   return (

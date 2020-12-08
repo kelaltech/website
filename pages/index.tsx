@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Home from '../src/layout-default/pages/home/home'
 import LayoutDefault from '../src/layout-default/layout-default'
+import Home from '../src/layout-default/pages/home/home'
 
 function Index() {
   return (

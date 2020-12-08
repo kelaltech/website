@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 import { IImgSrc } from '../../../lib/img-src'

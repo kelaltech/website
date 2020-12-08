@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import Axios from 'axios'
 import {
   Block,
   Button,
@@ -9,20 +9,21 @@ import {
   Warning,
   Yoga
 } from 'gerami'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useMemo, useState } from 'react'
+
+import { faConnectdevelop } from '@fortawesome/free-brands-svg-icons'
 import {
   faAt,
   faEnvelope,
   faMapSigns,
   faPhone
 } from '@fortawesome/free-solid-svg-icons'
-import { faConnectdevelop } from '@fortawesome/free-brands-svg-icons'
-import Axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import './contact-us.scss'
-import { ContactUsProps } from './contact-us-props'
 import { IMessage } from '../../../../pages/api/message'
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
+import { ContactUsProps } from './contact-us-props'
+import './contact-us.scss'
 
 function ContactUs({
   bg,

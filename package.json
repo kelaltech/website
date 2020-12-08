@@ -1,8 +1,8 @@
 {
   "name": "kelal-tech-website",
-  "version": "0.1.0",
-  "description": "Official website of kelal tech plc (https://www.kelaltech.com).",
-  "author": "kelal tech plc <info@kelaltech.com> (https://www.kelaltech.com)",
+  "version": "2.0.0",
+  "description": "Official Website of Kelal Tech PLC (https://www.kelaltech.com).",
+  "author": "Kelal Tech PLC <info@kelaltech.com> (https://www.kelaltech.com)",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

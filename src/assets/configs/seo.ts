@@ -1,16 +1,19 @@
 import { NextSeoProps } from 'next-seo/lib'
 
 export default {
-  title: 'Empower Creators! – Official Website | kelal tech plc',
+  title: 'Empower Makers! – Official Website | Kelal Tech PLC',
   description:
-    'We Empower Creators. Through Digital Platforms. | We are an Ethiopian-based IT company working on software and hardware solutions for creative businesses.',
+    'We Empower Makers Using Digital Platforms | Kelal Tech PLC is an Ethiopia-based IT agency working on software solutions for creative businesses.',
   additionalMetaTags: [
-    { name: 'author', content: 'kelal tech plc' },
-    { name: 'copyright', content: '2020 © kelal tech plc' },
+    { name: 'author', content: 'Kelal Tech' },
+    {
+      name: 'copyright',
+      content: `${new Date().getFullYear()} © Kelal Tech PLC`
+    },
     {
       name: 'keywords',
       content:
-        'kelal tech plc,kelal tech.,kelal,kelaltech,empower creators,digital platforms,ethiopia,addis ababa,information technology,software,official company website'
+        'Kelal Tech PLC, Kelal Tech, Kelal, kelaltech, Empower Makers, Digital Platforms, Ethiopia, Addis Ababa, Information Technology, Software, Official Company Website, Website Design In Ethiopia, Website Development in Ethiopia'
     },
     { name: 'robots', content: 'index,follow' },
     { name: 'theme-color', content: '#00b478' }
@@ -20,8 +23,8 @@ export default {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.kelaltech.com/',
-    site_name: 'kelal tech plc | Official Website',
-    images: [{ url: 'https://www.kelaltech.com/promo.jpg' }]
+    site_name: 'Kelal Tech PLC | Official Website',
+    images: [{ url: 'https://www.kelaltech.com/promo.png' }]
   },
 
   twitter: {

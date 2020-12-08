@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
 
-import { IImgSrc } from '../../../lib/img-src'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
+
+import { IImgSrc } from '../../../lib/img-src'
 
 export type TheCompanyProps = {
   bg?: IImgSrc

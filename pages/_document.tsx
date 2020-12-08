@@ -1,5 +1,5 @@
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   render() {
@@ -11,10 +11,28 @@ class MyDocument extends Document {
           <link rel="dns-prefetch" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://www.google-analytics.com" />
 
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/logo-512.png" />
-          
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00b478" />
+          <meta name="msapplication-TileColor" content="#00b478" />
+          <meta name="theme-color" content="#00b478" />
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -59,8 +77,14 @@ class MyDocument extends Document {
               `
             }}
           />
-          
-          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7931519.js" />
+
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/7931519.js"
+          />
         </Head>
 
         <body>

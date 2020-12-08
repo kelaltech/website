@@ -1,12 +1,13 @@
-import React, { useMemo } from 'react'
 import { AccordionSlider, Block, Content, Yoga } from 'gerami'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import React, { useMemo } from 'react'
 
-import './the-company.scss'
-import { TheCompanyProps } from './the-company-props'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
 import useImgSrcMulti from '../../../shared/hooks/use-img-src-multi/use-img-src-multi'
+import { TheCompanyProps } from './the-company-props'
+import './the-company.scss'
 
 function TheCompany({
   bg,

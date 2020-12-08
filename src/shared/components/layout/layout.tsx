@@ -1,9 +1,9 @@
-import React, { PropsWithChildren, ReactNode } from 'react'
 import { MinHeightProperty } from 'csstype'
 import { Page, Warning } from 'gerami'
+import React, { PropsWithChildren, ReactNode } from 'react'
 
-import Header, { IHeaderProps } from './header/header'
 import Footer from './footer/footer'
+import Header, { IHeaderProps } from './header/header'
 
 type ILayoutProps = PropsWithChildren<{
   error?: any

@@ -1,6 +1,16 @@
-import React from 'react'
 import { Button } from 'gerami'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
+
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faNpm,
+  faTelegram,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons'
+import { faSmileWink } from '@fortawesome/free-regular-svg-icons'
 import {
   faAt,
   faAward,
@@ -11,22 +21,12 @@ import {
   faMobileAlt,
   faSignal
 } from '@fortawesome/free-solid-svg-icons'
-import { faSmileWink } from '@fortawesome/free-regular-svg-icons'
-import {
-  faFacebook,
-  faGitlab,
-  faInstagram,
-  faLinkedin,
-  faNpm,
-  faTelegram,
-  faTwitter
-} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { IImgSrcInput } from '../../lib/img-src'
-import { IConfigSrc } from '../config'
-
-import KelalWordMark from './components/kelal-word-mark/kelal-word-mark'
 import LiteImage from '../../shared/components/lite-image/lite-image'
+import { IConfigSrc } from '../config'
+import KelalWordMark from './components/kelal-word-mark/kelal-word-mark'
 
 const logoSvg: IImgSrcInput = {
   src: require('./images/brand/logo.svg')
@@ -60,9 +60,9 @@ const dreamLogo: IImgSrcInput = {
   src: require('./images/home/our-partners/dream.png'),
   webP: require('./images/home/our-partners/dream.webp')
 }
-const hadidLogo: IImgSrcInput = {
-  src: require('./images/home/our-partners/hadid.png'),
-  webP: require('./images/home/our-partners/hadid.webp')
+const nyalaLogo: IImgSrcInput = {
+  src: require('./images/home/our-partners/nyala.png'),
+  webP: require('./images/home/our-partners/nyala.webp')
 }
 const sunItLogo: IImgSrcInput = {
   src: require('./images/home/our-partners/sun-it.png'),
@@ -77,7 +77,7 @@ const config: IConfigSrc = {
     wordMark: {
       component: <KelalWordMark />
     },
-    motto: 'Empower Creators!'
+    motto: 'Empower Makers!'
   },
 
   home: {
@@ -86,8 +86,8 @@ const config: IConfigSrc = {
         type: 'intro',
         props: {
           bg: introBg,
-          displayTitle: 'We Empower Creators.',
-          displaySubtitle: 'Through Digital Platforms.'
+          displayTitle: 'We Empower Makers',
+          displaySubtitle: 'Using Digital Platforms'
         }
       },
 
@@ -130,7 +130,7 @@ const config: IConfigSrc = {
         props: {
           description: (
             <>
-              kelal tech. works on a wide range of software and system products,
+              Kelal Tech works on a wide range of software and system products,
               from simple websites for small businesses and useful mobile
               applications to open source libraries and fully integrated systems
               for enterprises. We've got you covered!
@@ -218,16 +218,16 @@ const config: IConfigSrc = {
                   </Button>
                 </a>,
                 <a
-                  href="https://www.gitlab.com/kelal/_dev/gerami"
+                  href="https://github.com/kelaltech/gerami"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Button>
                     <FontAwesomeIcon
-                      icon={faGitlab}
+                      icon={faGithub}
                       className="margin-right-normal"
                     />
-                    Contribute on GitLab
+                    Contribute on GitHub
                   </Button>
                 </a>,
                 <a
@@ -250,8 +250,8 @@ const config: IConfigSrc = {
               description: (
                 <>
                   If you've got a company with special (or custom) IT needs,
-                  kelal tech. has got you covered. Just contact us and we'll
-                  make a deal.
+                  Kelal Tech has got you covered. Just contact us and we'll make
+                  a deal.
                   <br />
                   <span className="italic">We promise to be fair!</span>
                 </>
@@ -279,19 +279,19 @@ const config: IConfigSrc = {
           partners: [
             {
               logo: fffLogo,
-              name: '(3F) Finfine Furniture Factory PLC'
+              name: '(3F) Finfine Furniture Factory P.L.C.'
             },
             {
               logo: dreamLogo,
-              name: 'Dream Engineering PLC'
+              name: 'Dream Engineering P.L.C.'
             },
             {
-              logo: hadidLogo,
-              name: 'Hadid Marketing and Promotion'
+              logo: nyalaLogo,
+              name: 'Nyala Motors S.C'
             },
             {
               logo: sunItLogo,
-              name: 'Sun IT Solutions PLC'
+              name: 'Sun IT Solutions Plc.'
             }
           ]
         }
@@ -308,7 +308,7 @@ const config: IConfigSrc = {
                   IT solutions based on your business needs. Institutions like
                   us are the core of a country that is advancing fast into the
                   tech industry; steps taken into the digital world is
-                  inevitable. Our company, kelal tech plc, will be with you on
+                  inevitable. Our company, Kelal Tech PLC, will be with you on
                   this journey: guiding, consulting and building your company
                   with the latest and modern technologies.
                 </span>

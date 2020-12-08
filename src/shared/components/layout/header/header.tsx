@@ -1,10 +1,11 @@
-import React, { CSSProperties, ReactNode, useState } from 'react'
 import { Block, Button, FlexSpacer, Image, MenuDrop, MenuItem } from 'gerami'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import React, { CSSProperties, ReactNode, useState } from 'react'
 
-import './header.scss'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import config from '../../../../data/config'
+import './header.scss'
 import { INavigationItem } from './interfaces'
 
 export interface IHeaderProps {

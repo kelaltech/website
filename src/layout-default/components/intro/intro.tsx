@@ -1,10 +1,10 @@
-import React from 'react'
 import { Button, Image } from 'gerami'
+import React from 'react'
 
-import './intro.scss'
-import { IntroProps } from './intro-props'
 import config from '../../../data/config'
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
+import { IntroProps } from './intro-props'
+import './intro.scss'
 
 function Intro({ bg, displayTitle, displaySubtitle }: IntroProps) {
   return (

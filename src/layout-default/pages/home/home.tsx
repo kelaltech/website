@@ -1,12 +1,12 @@
 import React from 'react'
 
 import config from '../../../data/config'
-import Intro from '../../components/intro/intro'
-import Promos from '../../components/promos/promos'
-import OurSolutions from '../../components/our-solutions/our-solutions'
-import TheCompany from '../../components/the-company/the-company'
 import ContactUs from '../../components/contact-us/contact-us'
+import Intro from '../../components/intro/intro'
 import OurPartners from '../../components/our-partners/our-partners'
+import OurSolutions from '../../components/our-solutions/our-solutions'
+import Promos from '../../components/promos/promos'
+import TheCompany from '../../components/the-company/the-company'
 
 function Home() {
   return !config.home ? null : (

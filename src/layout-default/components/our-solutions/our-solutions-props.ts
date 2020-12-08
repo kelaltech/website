@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
 import { geramiSizeTypes } from 'gerami'
+import { IYogaProps } from 'gerami/src/components/Yoga/Yoga'
+import { ReactNode } from 'react'
 
 import { IImgSrc } from '../../../lib/img-src'
-import { IYogaProps } from 'gerami/src/components/Yoga/Yoga'
 
 export type OurSolutionsProps = {
   description?: string | ReactNode

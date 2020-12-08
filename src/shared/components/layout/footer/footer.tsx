@@ -1,8 +1,8 @@
-import React from 'react'
 import { Block, Flex, FlexSpacer } from 'gerami'
+import React from 'react'
 
-import './footer.scss'
 import config from '../../../../data/config'
+import './footer.scss'
 
 export default function Footer() {
   return (

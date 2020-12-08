@@ -1,10 +1,11 @@
-import React from 'react'
 import { Block, Container, Content, Yoga } from 'gerami'
+import React from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import './promos.scss'
-import { PromosProps } from './promos-props'
 import LiteParallax from '../../../shared/components/lite-parallax/lite-parallax'
+import { PromosProps } from './promos-props'
+import './promos.scss'
 
 function Promos({ bg, maxPromoPerColumn = 3, promos }: PromosProps) {
   return (

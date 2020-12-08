@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next'
 import * as crypto from 'crypto'
 import * as https from 'https'
+import { NextApiRequest, NextApiResponse } from 'next'
 import qs from 'qs'
 
 // * /api/gravatar?email&__gravatar-queries__
@@ -29,18 +29,12 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
         'must_revalidate, public, max-age=31557600' // 1 year
 
       response.writeHead(proxyResponse.statusCode, proxyResponse.headers)
-      proxyResponse.pipe(
-        response,
-        { end: true }
-      )
+      proxyResponse.pipe(response, { end: true })
     })
     .on('error', e => {
       console.error(e)
       response.status(500).end()
     })
 
-  request.pipe(
-    proxyRequest,
-    { end: true }
-  )
+  request.pipe(proxyRequest, { end: true })
 }
