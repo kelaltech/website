@@ -405,7 +405,25 @@ const config: IConfigSrc = {
                 { icon: faTelegram, url: 'https://t.me/kaleab14' },
                 { icon: faTwitter, url: 'https://twitter.com/kaleab14' }
               ]
-            }
+            },
+            {
+              name: 'Mikias T. Abebe',
+              photoSrc: {
+                src: `/api/gravatar?email=${encodeURIComponent(
+                  'mikiastilahun@gmail.com'
+                )}&s=100&d=mp`
+              },
+              links: [
+                { icon: faGlobeAfrica, url: 'https://miketabebe.me/' },
+                { icon: faAt, url: 'mailto:mike@kelaltech.com' },
+                {
+                  icon: faLinkedin,
+                  url: 'https://www.linkedin.com/in/mikias-a-08b6a1101/'
+                },
+                { icon: faTelegram, url: 'https://t.me/MikeAbebe' },
+                { icon: faTwitter, url: 'https://twitter.com/Mike_T_Abebe' }
+              ]
+            },
           ],
           solutionTypes: [
             {
