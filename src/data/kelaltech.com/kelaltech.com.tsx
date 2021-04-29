@@ -392,11 +392,11 @@ const config: IConfigSrc = {
               name: 'Kaleab S. Melkie',
               photoSrc: {
                 src: `/api/gravatar?email=${encodeURIComponent(
-                  'kaleabmelkie@gmail.com'
+                  'kaleab@kelaltech.com'
                 )}&s=100&d=mp`
               },
               links: [
-                { icon: faGlobeAfrica, url: 'https://kaleab.kelaltech.com/' },
+                { icon: faGlobeAfrica, url: 'https://kaleabmelkie.com/' },
                 { icon: faAt, url: 'mailto:kaleab@kelaltech.com' },
                 {
                   icon: faLinkedin,
