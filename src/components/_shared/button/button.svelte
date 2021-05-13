@@ -19,6 +19,7 @@
     font-weight: 500;
     color: #0e1c2a;
   }
+
   .border-gradient {
     border: double 3px transparent;
     background-image: linear-gradient(white, white),

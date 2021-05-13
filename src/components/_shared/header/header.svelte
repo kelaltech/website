@@ -12,7 +12,6 @@
   </div>
   <div class={'header-items'}>
     <Button name={'Lets talk'} />
-
     <button class={'menu-icon'}>
       <img src={menuIcon} alt="menu icon" />
       <span>Menu</span>
