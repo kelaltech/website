@@ -1,4 +1,3 @@
-@import './_fonts.css';
 html,
 body {
   padding: 0;
@@ -26,6 +25,6 @@ a:hover {
   font-size: 70px;
   line-height: 84px;
   background: radial-gradient(100% 423.18% at 0% 100%, #00b478 0%, #ffc800 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
