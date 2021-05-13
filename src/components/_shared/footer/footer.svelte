@@ -24,7 +24,7 @@
         <h5>SOLUTIONS</h5>
 
         <div>
-          <a href="/design"> Design a Website </a>
+          <a href=""> Design a Website </a>
           <a href=""> Develop a Web App </a>
           <a href=""> Build a Mobile App </a>
           <a href=""> Open Source </a>
