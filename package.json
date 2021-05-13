@@ -1,14 +1,17 @@
 {
   "name": "Kelaltech",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "lint": "prettier --check src *.cjs *.json && eslint --ignore-path .gitignore .",
+    "format": "prettier --write src *.cjs *.json"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "1.0.0-next.7",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
@@ -20,7 +23,16 @@
     "svelte": "^3.34.0",
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
+    "typescript": "^4.0.0",
+    "vite": "2.2.3",
+    "svelte-icons": "2.1.0",
+    "husky": "6.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
 }

@@ -1,182 +1,158 @@
-
 <script>
-    import logo from '../../../assets/images/brand/logo.png'
-    import facebook from '../../../assets/images/icons/facebook.png'
-    import instagram from '../../../assets/images/icons/instagram.png'
-    import linkedin from '../../../assets/images/icons/linkedin.png'
-    import twitter from '../../../assets/images/icons/twitter.png'
+  import logo from '../../../assets/images/brand/logo.png'
+  import facebook from '../../../assets/images/icons/facebook.png'
+  import instagram from '../../../assets/images/icons/instagram.png'
+  import linkedin from '../../../assets/images/icons/linkedin.png'
+  import twitter from '../../../assets/images/icons/twitter.png'
 </script>
-<div class={'footer-container'} >
-    <div class="footer-content">
-        <div class="links-container">
-            <div class={'brand-info'}>
-                <a href="/" class={'logo-link'}>
-                    <img height="64" width={166} src={logo} alt="kelaltech logo" />
-                </a>
 
-                <p>
-                    We Empower Makers <br/> Using Digital Platforms
-                </p>
-                <a href="">
-                    Talk to sales →
-                </a>
-            </div>
+<div class={'footer-container'}>
+  <div class="footer-content">
+    <div class="links-container">
+      <div class={'brand-info'}>
+        <a href="/" class={'logo-link'}>
+          <img height="64" width={166} src={logo} alt="kelaltech logo" />
+        </a>
 
-            <div class={'footer-titles'}>
-                <h5>SOLUTIONS</h5>
+        <p>
+          We Empower Makers <br /> Using Digital Platforms
+        </p>
+        <a href=""> Talk to sales → </a>
+      </div>
 
-                <div>
-                    <a href="/design">
-                        Design a Website
-                    </a>
-                    <a href="">
-                        Develop a Web App
-                    </a>
-                    <a href="">
-                        Build a Mobile App
-                    </a>
-                    <a href="">
-                        Open Source
-                    </a>
-                </div>
-            </div>
+      <div class={'footer-titles'}>
+        <h5>SOLUTIONS</h5>
 
-            <div class={'footer-titles'}>
-                <h5>COMPANY</h5>
-                <div>
-                    <a href="">
-                        About Us
-                    </a>
-                    <a href="">
-                        Contact
-                    </a>
-                    <a href="">
-                        Jobs
-                    </a>
-                    <a href="">
-                        Newsletter
-                    </a>
-                </div>
-            </div>
+        <div>
+          <a href="/design"> Design a Website </a>
+          <a href=""> Develop a Web App </a>
+          <a href=""> Build a Mobile App </a>
+          <a href=""> Open Source </a>
         </div>
-        <div class={'icon-link-container'}>
-            <a href="">
-                <img width={32} height={32} src={twitter} alt="link to twiiter">
-            </a>
-            <a href="">
-                <img width={32} height={32} src={facebook} alt="link to  facebook">
-            </a>
-            <a href="">
-                <img width={32} height={32} src={instagram} alt="link to  instagram">
-            </a>
-            <a href="">
-                <img width={32} height={32} src={linkedin} alt="link to linkedin">
-            </a>
-        </div>
-        <div class={'copy-right-box'}>
-            <p>
-                2020 © Kelal Tech PLC. All rights reserved.
-            </p>
+      </div>
 
-            <div>
-                <a href="">
-                    Terms
-                </a>
-                <a href="">
-                    Privacy Policy
-                </a>
-            </div>
+      <div class={'footer-titles'}>
+        <h5>COMPANY</h5>
+        <div>
+          <a href=""> About Us </a>
+          <a href=""> Contact </a>
+          <a href=""> Jobs </a>
+          <a href=""> Newsletter </a>
         </div>
+      </div>
     </div>
+    <div class={'icon-link-container'}>
+      <a href="">
+        <img width={32} height={32} src={twitter} alt="link to twiiter" />
+      </a>
+      <a href="">
+        <img width={32} height={32} src={facebook} alt="link to  facebook" />
+      </a>
+      <a href="">
+        <img width={32} height={32} src={instagram} alt="link to  instagram" />
+      </a>
+      <a href="">
+        <img width={32} height={32} src={linkedin} alt="link to linkedin" />
+      </a>
+    </div>
+    <div class={'copy-right-box'}>
+      <p>2020 © Kelal Tech PLC. All rights reserved.</p>
+
+      <div>
+        <a href=""> Terms </a>
+        <a href=""> Privacy Policy </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
-    .footer-container {
-        padding: 64px 128px;
-        padding-bottom: 0;
-        background: radial-gradient(100% 146.94% at 50% 100%, rgba(248, 248, 248, 0) 0%, #F8F8F8 100%);
-    }
+  .footer-container {
+    padding: 64px 128px;
+    padding-bottom: 0;
+    background: radial-gradient(100% 146.94% at 50% 100%, rgba(248, 248, 248, 0) 0%, #f8f8f8 100%);
+  }
 
-    .footer-content {
-        width:100%;
-    }
+  .footer-content {
+    width: 100%;
+  }
 
-    .brand-info {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
+  .brand-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-    .brand-info > p {
-        color:#0E1C2A;
-        opacity: 0.56;
-    }
+  .brand-info > p {
+    color: #0e1c2a;
+    opacity: 0.56;
+  }
 
-    .brand-info > a {
-        color:#00B478;
-    }
+  .brand-info > a {
+    color: #00b478;
+  }
 
-    .brand-info > .logo-link {
-        width: 166px;
-    }
+  .brand-info > .logo-link {
+    width: 166px;
+  }
 
-    .links-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-    }
+  .links-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
 
-    .footer-titles{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-    .footer-titles > h5 {
-        font-size: 18px;
-        margin: 0;
-        color: #0E1C2A;
-        opacity: 0.84;
-    }
-    .footer-titles > div {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-    .footer-titles > div > a {
-        color: #0E1C2A;
-        opacity: 0.56;
-        font-size: 16px;
-        font-weight: 500;
-        text-decoration: none;
-    }
+  .footer-titles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-titles > h5 {
+    font-size: 18px;
+    margin: 0;
+    color: #0e1c2a;
+    opacity: 0.84;
+  }
+  .footer-titles > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .footer-titles > div > a {
+    color: #0e1c2a;
+    opacity: 0.56;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+  }
 
-    .icon-link-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 24px;
-        width: 200px;
-        padding-top: 64px;
-        padding-bottom: 64px;
-    }
+  .icon-link-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    width: 200px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 
-    .copy-right-box {
-        display: flex;
-        justify-content: space-between;
-        padding: 32px 0;
-        color: #0E1C2A;
-        opacity: 0.56;
-    }
+  .copy-right-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    color: #0e1c2a;
+    opacity: 0.56;
+  }
 
-    .copy-right-box > p {
-        padding: 0;
-        margin: 0;
-        
-        font-size: 14px;
-    }
+  .copy-right-box > p {
+    padding: 0;
+    margin: 0;
 
-    .copy-right-box > div  {
-        font-size: 14px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap:32;
-    }
+    font-size: 14px;
+  }
+
+  .copy-right-box > div {
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32;
+  }
 </style>
