@@ -1,0 +1,29 @@
+@import './_fonts.css';
+html,body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+h1,h2 {
+    margin: 0;
+    font-family: 'Comfortaa';
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.gradient-text {
+    font-size: 70px;
+    line-height: 84px;
+    background: radial-gradient(100% 423.18% at 0% 100%, #00B478 0%, #FFC800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
