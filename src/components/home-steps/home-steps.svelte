@@ -59,6 +59,10 @@
     font-weight: 500;
   }
 
+  .step-item > h1 {
+    width:50%;
+  }
+
   .step-title {
     font-size: 70px;
     line-height: 84px;
