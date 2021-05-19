@@ -17,7 +17,7 @@
   <div class="step-item">
     <h1 class="step-title">02</h1>
     <p class={'desc-1'}>
-      <span>We prototype</span>the design. You help us improve it with feeback rounds.
+      <span>We prototype </span> the design. You help us improve it with feeback rounds.
     </p>
 
     <p class="desc-2">

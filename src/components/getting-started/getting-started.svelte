@@ -1,17 +1,34 @@
-<script>
+<script lang="ts" >
   import globe from '../../assets/images/icons/globe.png'
   import pointer from '../../assets/images/icons/mouse-pointer.png'
   import lightBulb from '../../assets/images/icons/mdi-light_lightbulb.png'
   import smartphone from '../../assets/images/icons/smartphone.png'
   import arrow from '../../assets/images/icons/arrow-right.png'
+  import Form from '../quote-form/quote-form.svelte'
+
+  let selectedButton = ''
+  let openForm:boolean = false;
+  
+  function handleClicked (text:string){
+    console.log('clicked')
+    selectedButton =text
+    openForm=true
+  }
 </script>
 
 <div class="getting-started-container">
+
+  {#if !openForm}
   <div class="getting-started-content">
     <h1>How Can we Help You?</h1>
 
     <div class="getting-started-actions">
-      <div class="action-item">
+      <button on:click={()=>handleClicked('Web page')}>
+        Button
+      </button> 
+
+      <!-- acction btn-1 -->
+      <div   class="action-item">
         <img src={globe} alt="" />
         <div>
           <span>I want a landing page, website or a blog</span>
@@ -19,6 +36,7 @@
         </div>
       </div>
 
+      <!-- acction btn-2 -->
       <div class="action-item">
         <img src={pointer} alt="" />
         <div>
@@ -26,6 +44,8 @@
           <img src={arrow} alt="" />
         </div>
       </div>
+
+      <!-- acction btn-3 -->
       <div class="action-item">
         <img src={smartphone} alt="" />
         <div>
@@ -34,6 +54,7 @@
         </div>
       </div>
 
+      <!-- acction btn-3 -->
       <div class="action-item">
         <img src={lightBulb} alt="" />
         <div>
@@ -43,6 +64,9 @@
       </div>
     </div>
   </div>
+  {:else}
+  <Form title={'I want a landing page'} />
+  {/if}
 </div>
 
 <style>
@@ -51,7 +75,6 @@
     height: 1020px;
     clip-path: polygon(0 9%, 100% 0%, 100% 91%, 0% 100%);
     background: #0e1c2a;
-
     display: flex;
     justify-content: center;
     align-items: center;

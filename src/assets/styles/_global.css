@@ -21,6 +21,119 @@ a:hover {
   text-decoration: underline;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
+.h0-700, .h1-700, .h2-700, .h3-700, .h4-700, .h5-700{
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: bold;
+}
+.h0-700 {
+  font-size: 48px;
+  line-height: 72px;
+}
+
+.h1-700{
+  font-size: 32px;
+  line-height: 48px;
+}
+.h2-700{
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.h3-700{
+  font-size: 24px;
+  line-height: 32px;
+}
+.h4-700{
+  font-size: 21px;
+  line-height: 32px;
+}
+
+.h5-700{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.large-300, .large-500,.medium-300,.small-400,.small-500,.very-small-400,.very-small-500,.default-400,.default-500 {
+  font-family: Poppins;
+  font-style: normal;
+}
+
+.default-400 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.default-500{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.large-300 {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 28px;
+}
+
+.large-500 {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 32px;
+}
+
+.small-400{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.small-500 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.very-small-400 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.very-small-500{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+.medium-300 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.primary {
+  color: #00B478;
+}
+.primary-dark {
+  color: #0E2A1C;
+}
+
+.accent {
+  color: #FFC800;
+}
+.white {
+  color: #fff;
+}
+.light-1 {
+  color:#F8F8F8;
+}
+.black {
+  color: #000;
+}
 .gradient-text {
   font-size: 70px;
   line-height: 84px;
