@@ -1,5 +1,6 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static'
+import { optimizeDeps } from 'vite';
 /** @type {import('@sveltejs/kit').Config} */
 
 const config = {
@@ -20,6 +21,12 @@ const config = {
 		//   crawl: true,
 		// },
 		// amp: false,
+
+		vite:()=>{
+			{
+				['nodemailer']
+			}
+		}
 	}
 };
 

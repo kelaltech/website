@@ -1,5 +1,8 @@
 <script lang="ts">
   export let title
+  let submit
+  let contact = ''
+  let description = ''
   import { createEventDispatcher } from 'svelte'
 
   const dispatch = createEventDispatcher()
@@ -9,12 +12,22 @@
   }
 
   function handleForm(e: Event) {
-    e.preventDefault()
-    alert(title)
+    console.log(contact, description, title)
+    submit = fetch('/api/message', {
+      method: 'POST',
+      body: JSON.stringify({ from: contact, text: description, subject: title }),
+      headers: { 'content-type': 'application/json' },
+    })
+      .then((resp) => {
+        console.log(resp.json())
+      })
+      .catch((e) => {
+        console.log(e)
+      })
   }
 </script>
 
-<form on:submit={handleForm} class={'quote-form-container'}>
+<form on:submit|preventDefault={handleForm} method="POST" class={'quote-form-container'}>
   <h1 class={'h1-700'}>Tell us more...</h1>
 
   <div class={'input-container'}>
@@ -24,7 +37,8 @@
       type="text"
       class="primary default-400 input"
       id={'emailorphone'}
-      name="Email or Phone"
+      name="contact"
+      bind:value={contact}
     />
   </div>
 
@@ -36,6 +50,8 @@
       placeholder="type your text here"
       class="primary default-400 input text-area"
       id={'description'}
+      name={'description'}
+      bind:value={description}
     />
   </div>
 
