@@ -1,4 +1,8 @@
-<button class={'border-gradient border-gradient-purple'}>
+<script>
+  let className;
+  export { className as class}
+</script>
+<button class={`border-gradient border-gradient-purple ${className || ''}`}>
   <slot>Button</slot>
 </button>
 

@@ -11,9 +11,11 @@
     </a>
   </div>
   <div class={'header-items'}>
-    <Button >
-      Lets talk
-    </Button>
+    <div class={'action-btn'}>
+      <Button>
+        Lets talk
+      </Button>
+    </div>
     <button class={'menu-icon'}>
       <img src={menuIcon} alt="menu icon" />
       <span>Menu</span>
@@ -33,6 +35,9 @@
     z-index: 999;
   }
 
+  .company-logo {
+    align-self: center;
+  }
   .header-items {
     display: flex;
     align-items: center;
@@ -58,4 +63,19 @@
   .menu-icon:hover {
     cursor: pointer;
   }
+
+  
+  @media screen and (max-width: 550px) {
+    .header-container{
+      padding:16px;
+    }
+
+    .company-logo img {
+      height: 42px;
+    } 
+
+   .action-btn {
+      display: none;
+    }
+    }
 </style>
