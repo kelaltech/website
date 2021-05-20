@@ -21,6 +21,11 @@ a:hover {
   text-decoration: underline;
 }
 
+button {
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
 button:hover {
   cursor: pointer;
 }

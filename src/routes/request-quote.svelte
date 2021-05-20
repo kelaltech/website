@@ -112,8 +112,8 @@
 <style>
   .getting-started-container {
     width: 100%;
-    height: 1024px;
-    clip-path: polygon(0 0, 100% 0%, 100% 91%, 0% 100%);
+    height: auto;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
     background: #0e1c2a;
     display: flex;
     justify-content: center;
@@ -174,6 +174,9 @@
 
   /* small screen */
   @media only screen and (min-width: 640px) {
+    .getting-started-container {
+      height: calc(100vh - 112px);
+    }
     .action-item {
       padding: 24px;
     }

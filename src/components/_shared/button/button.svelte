@@ -5,11 +5,11 @@
 </script>
 
 {#if !to}
-  <button class={`border-gradient border-gradient-purple ${className || ''}`}>
+  <button class={`small-400 border-gradient border-gradient-purple ${className || ''}`}>
     <slot>Button</slot>
   </button>
 {:else}
-  <a href={to} class={`border-gradient border-gradient-purple ${className || ''}`}>
+  <a href={to} class={` small-400 border-gradient border-gradient-purple ${className || ''}`}>
     <slot>Link</slot>
   </a>
 {/if}
@@ -22,7 +22,6 @@
     padding: 16px 32px;
     border-radius: 14px;
     background: none;
-    font-size: 18px;
     font-weight: 500;
     color: #0e1c2a;
   }

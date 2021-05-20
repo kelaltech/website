@@ -2,6 +2,9 @@
   import logo from '../../../assets/images/brand/logo.png'
   import Button from '../button/button.svelte'
   import menuIcon from '../../../assets/images/icons/menu.png'
+
+  export let backgroundColor
+  export let color = '#0e1c2a'
 </script>
 
 <div class={'header-container '}>
@@ -12,7 +15,7 @@
   </div>
   <div class={'header-items'}>
     <div class={'action-btn'}>
-      <Button>Lets talk</Button>
+      <Button to={'/request-quote'}>Lets talk</Button>
     </div>
     <button class={'menu-icon'}>
       <img src={menuIcon} alt="menu icon" />
@@ -23,7 +26,7 @@
 
 <style>
   .header-container {
-    background: transparent;
+    background: var(--backgroundColor);
     width: 100%;
     padding: 32px;
     display: flex;
@@ -31,6 +34,7 @@
     height: 112px;
     box-sizing: border-box;
     z-index: 999;
+    color: var(--color);
   }
 
   .company-logo {
