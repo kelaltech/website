@@ -12,13 +12,14 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		
-		router: false,
-		hydrate: false,
-		prerender: {
-		  enabled: true,
-		  crawl: true,
-		},
-		amp: false,
+		// TODO when deploying you might need some of the configs to be active 
+		// router: false,
+		// hydrate: false,
+		// prerender: {
+		//   enabled: true,
+		//   crawl: true,
+		// },
+		// amp: false,
 	}
 };
 

@@ -7,6 +7,7 @@
 </script>
 
 <div class={'footer-container'}>
+
   <div class="footer-content">
     <div class="links-container">
       <div class={'brand-info'}>

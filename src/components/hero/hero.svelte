@@ -20,7 +20,9 @@
       </div>
 
       <div class="hero-content-action">
-        <Button name={'Request a Quote'} />
+        <Button>
+          Request a Quote
+        </Button>
         <span>or, <a href="" class={'find-out'}>find out more</a>&nbsp; ↓</span>
       </div>
     </div>

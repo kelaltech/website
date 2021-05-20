@@ -9,8 +9,20 @@
   let selectedButton = ''
   let openForm:boolean = false;
   
-  function handleClicked (text:string){
-    console.log('clicked')
+  function handleClick ( text: string){
+    selectedButton =text
+    openForm=true
+  }
+
+  function handleOpenForm (){
+    openForm= false
+  }
+
+  function handleKeyboardClick(event,text){
+    // Keypresses other then Enter and Space should not trigger a command
+    if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
+        return;
+    }
     selectedButton =text
     openForm=true
   }
@@ -23,12 +35,8 @@
     <h1>How Can we Help You?</h1>
 
     <div class="getting-started-actions">
-      <button on:click={()=>handleClicked('Web page')}>
-        Button
-      </button> 
-
       <!-- acction btn-1 -->
-      <div   class="action-item">
+      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want a landing page, website or a blog')} on:click={()=>handleClick('I want a landing page, website or a blog')}   class="action-item">
         <img src={globe} alt="" />
         <div>
           <span>I want a landing page, website or a blog</span>
@@ -37,7 +45,7 @@
       </div>
 
       <!-- acction btn-2 -->
-      <div class="action-item">
+      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want a custom web app')} on:click={()=>handleClick('I want a custom web app')} class="action-item">
         <img src={pointer} alt="" />
         <div>
           <span>I want a custom web app</span>
@@ -46,7 +54,7 @@
       </div>
 
       <!-- acction btn-3 -->
-      <div class="action-item">
+      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want a custom mobile app')} on:click={()=>handleClick('I want a custom mobile app')} class="action-item">
         <img src={smartphone} alt="" />
         <div>
           <span>I want a custom mobile app</span>
@@ -54,8 +62,8 @@
         </div>
       </div>
 
-      <!-- acction btn-3 -->
-      <div class="action-item">
+      <!-- acction btn-4 -->
+      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want something else. Let me explain…')} on:click={()=>handleClick('I want something else. Let me explain…')} class="action-item">
         <img src={lightBulb} alt="" />
         <div>
           <span>I want something else. Let me explain…</span>
@@ -65,7 +73,7 @@
     </div>
   </div>
   {:else}
-  <Form title={'I want a landing page'} />
+  <Form on:back={handleOpenForm} title={'I want a landing page'} />
   {/if}
 </div>
 

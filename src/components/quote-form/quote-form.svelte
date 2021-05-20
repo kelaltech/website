@@ -1,10 +1,24 @@
 <script lang="ts" >
     export let title;
+    import { createEventDispatcher } from 'svelte'
+
+
+    const dispatch = createEventDispatcher()
+
+
+    function handleBack(){
+        dispatch('back')
+    }
+
+    function handleForm(e: Event ){
+       e.preventDefault()
+       alert(title)
+    }
 
 </script>
 
 
-<div class={'quote-form-container'} >
+<form on:submit={handleForm}  class={'quote-form-container'} >
     <h1 class={'h1-700'}>Tell us more...</h1>
 
 
@@ -15,13 +29,20 @@
 
     <div class={'input-container'} >
         <label class={'small-500 label'} for="description"> Tell us about yourself and the project:</label>
-        <textarea placeholder="type your text here" class="primary default-400 input text-area" id={'description'}>
-
-        </textarea>
+        <textarea placeholder="type your text here" class="primary default-400 input text-area" id={'description'}/>
     </div>
-</div>
 
-<style lang="css">
+    <div class={'form-action-container'} >
+        <button on:click={handleBack} class={'back default-500'}>
+            Back
+        </button>
+        <button type={'submit'} class={'default-500'}>
+            Submit
+        </button>
+    </div>
+</form>
+
+<style >
 
 .quote-form-container {
     width: 100%;
@@ -58,11 +79,32 @@
  }
 
  .input-container .input::placeholder {
-     color:#04573b91;
+     color:#046d4ab6;
  }
 
  .text-area {
      height: 120px !important;
+ }
+
+
+ .form-action-container {
+     width:100%;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .form-action-container button {
+     border-radius: 14px;
+     border: 2px solid #FFFFFF;
+     background: transparent;
+     color: #fff;
+     padding: 16px 32px;
+ }
+
+ .form-action-container .back {
+     border:none;
+     text-align: left;
+     padding-left: 0;
  }
 
 </style>

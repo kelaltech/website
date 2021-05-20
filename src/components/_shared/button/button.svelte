@@ -1,9 +1,5 @@
-<script>
-  export let name = 'Button'
-</script>
-
 <button class={'border-gradient border-gradient-purple'}>
-  {name}
+  <slot>Button</slot>
 </button>
 
 <style>
