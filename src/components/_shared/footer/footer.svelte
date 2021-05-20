@@ -7,7 +7,6 @@
 </script>
 
 <div class={'footer-container'}>
-
   <div class="footer-content">
     <div class="links-container">
       <div class={'brand-info'}>
@@ -69,7 +68,7 @@
 
 <style>
   .footer-container {
-    padding: 64px 128px;
+    padding: 64px 32px;
     padding-bottom: 0;
     background: radial-gradient(100% 146.94% at 50% 100%, rgba(248, 248, 248, 0) 0%, #f8f8f8 100%);
   }
@@ -81,12 +80,13 @@
   .brand-info {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 16px;
   }
 
   .brand-info > p {
     color: #0e1c2a;
     opacity: 0.56;
+    margin: 8px 0;
   }
 
   .brand-info > a {
@@ -99,13 +99,14 @@
 
   .links-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .footer-titles {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 16px;
   }
   .footer-titles > h5 {
     font-size: 18px;
@@ -129,7 +130,7 @@
   .icon-link-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 24px;
+    gap: 16px;
     width: 200px;
     padding-top: 64px;
     padding-bottom: 64px;
@@ -141,6 +142,7 @@
     padding: 32px 0;
     color: #0e1c2a;
     opacity: 0.56;
+    flex-wrap: wrap;
   }
 
   .copy-right-box > p {
@@ -155,5 +157,40 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32;
+  }
+
+  /* small screen */
+  @media only screen and (min-width: 640px) {
+    .links-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+    .brand-info {
+      gap: 32px;
+    }
+    .brand-info > p {
+      margin: 16px 0;
+    }
+    .footer-titles {
+      gap: 32px;
+    }
+    .icon-link-container {
+      width: 200px;
+      gap: 24px;
+    }
+  }
+
+  /* medium */
+  @media only screen and (min-width: 700px) {
+    .links-container {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+  /* extra large */
+  @media only screen and (min-width: 1295px) {
+    .footer-container {
+      padding: 64px 128px;
+      padding-bottom: 0;
+    }
   }
 </style>

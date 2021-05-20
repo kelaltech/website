@@ -47,11 +47,11 @@
 <style>
   .step-container {
     max-width: 1440px;
-    padding: 0 128px;
-    margin-top: 106px;
+    padding: 0 32px;
+    margin-top: 64px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 128px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .step-item > a {
@@ -60,7 +60,7 @@
   }
 
   .step-item > h1 {
-    width:50%;
+    width: 50%;
   }
 
   .step-title {
@@ -88,5 +88,28 @@
     font-size: 16px;
     color: rgba(14, 28, 42, 0.56);
     margin-bottom: 24px;
+  }
+
+  /* small */
+  @media only screen and (min-width: 640px) {
+    .step-container {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 106px;
+    }
+  }
+
+  /* medium */
+  @media only screen and (min-width: 700px) {
+    .step-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  /* extra large */
+  @media only screen and (min-width: 1295px) {
+    .step-container {
+      padding: 0 128px;
+      gap: 128px;
+    }
   }
 </style>

@@ -12,9 +12,7 @@
   </div>
   <div class={'header-items'}>
     <div class={'action-btn'}>
-      <Button>
-        Lets talk
-      </Button>
+      <Button>Lets talk</Button>
     </div>
     <button class={'menu-icon'}>
       <img src={menuIcon} alt="menu icon" />
@@ -64,18 +62,17 @@
     cursor: pointer;
   }
 
-  
   @media screen and (max-width: 550px) {
-    .header-container{
-      padding:16px;
+    .header-container {
+      padding: 16px;
     }
 
     .company-logo img {
       height: 42px;
-    } 
+    }
 
-   .action-btn {
+    .action-btn {
       display: none;
     }
-    }
+  }
 </style>

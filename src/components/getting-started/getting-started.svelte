@@ -1,4 +1,4 @@
-<script lang="ts" >
+<script lang="ts">
   import globe from '../../assets/images/icons/globe.png'
   import pointer from '../../assets/images/icons/mouse-pointer.png'
   import lightBulb from '../../assets/images/icons/mdi-light_lightbulb.png'
@@ -6,122 +6,191 @@
   import arrow from '../../assets/images/icons/arrow-right.png'
   import Form from '../quote-form/quote-form.svelte'
 
-  let selectedButton = ''
-  let openForm:boolean = false;
-  
-  function handleClick ( text: string){
-    selectedButton =text
-    openForm=true
+  let selectedButtonText = ''
+  let openForm = false
+
+  function handleClick(text: string) {
+    selectedButtonText = text
+    openForm = true
   }
 
-  function handleOpenForm (){
-    openForm= false
+  function handleOpenForm() {
+    openForm = false
   }
 
-  function handleKeyboardClick(event,text){
+  function handleKeyboardClick(event, text) {
     // Keypresses other then Enter and Space should not trigger a command
     if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
-        return;
+      return
     }
-    selectedButton =text
-    openForm=true
+    selectedButtonText = text
+    openForm = true
   }
 </script>
 
 <div class="getting-started-container">
-
   {#if !openForm}
-  <div class="getting-started-content">
-    <h1>How Can we Help You?</h1>
+    <div class="getting-started-content">
+      <h1>How Can we Help You?</h1>
 
-    <div class="getting-started-actions">
-      <!-- acction btn-1 -->
-      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want a landing page, website or a blog')} on:click={()=>handleClick('I want a landing page, website or a blog')}   class="action-item">
-        <img src={globe} alt="" />
-        <div>
-          <span>I want a landing page, website or a blog</span>
-          <img src={arrow} alt="" />
+      <div class="getting-started-actions">
+        <!-- acction btn-1 -->
+        <div
+          role={'button'}
+          tabindex="0"
+          on:keydown={(e) => handleKeyboardClick(e, 'I want a landing page, website or a blog')}
+          on:click={() => handleClick('I want a landing page, website or a blog')}
+          class="action-item"
+        >
+          <img src={globe} alt="" />
+          <div>
+            <span>I want a landing page, website or a blog</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
         </div>
-      </div>
 
-      <!-- acction btn-2 -->
-      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want a custom web app')} on:click={()=>handleClick('I want a custom web app')} class="action-item">
-        <img src={pointer} alt="" />
-        <div>
-          <span>I want a custom web app</span>
-          <img src={arrow} alt="" />
+        <!-- acction btn-2 -->
+        <div
+          role={'button'}
+          tabindex="0"
+          on:keydown={(e) => handleKeyboardClick(e, 'I want a custom web app')}
+          on:click={() => handleClick('I want a custom web app')}
+          class="action-item"
+        >
+          <img src={pointer} alt="" />
+          <div>
+            <span>I want a custom web app</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
         </div>
-      </div>
 
-      <!-- acction btn-3 -->
-      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want a custom mobile app')} on:click={()=>handleClick('I want a custom mobile app')} class="action-item">
-        <img src={smartphone} alt="" />
-        <div>
-          <span>I want a custom mobile app</span>
-          <img src={arrow} alt="" />
+        <!-- acction btn-3 -->
+        <div
+          role={'button'}
+          tabindex="0"
+          on:keydown={(e) => handleKeyboardClick(e, 'I want a custom mobile app')}
+          on:click={() => handleClick('I want a custom mobile app')}
+          class="action-item"
+        >
+          <img src={smartphone} alt="" />
+          <div>
+            <span>I want a custom mobile app</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
         </div>
-      </div>
 
-      <!-- acction btn-4 -->
-      <div role={'button'} tabindex="0" on:keydown={(e)=>handleKeyboardClick(e,'I want something else. Let me explain…')} on:click={()=>handleClick('I want something else. Let me explain…')} class="action-item">
-        <img src={lightBulb} alt="" />
-        <div>
-          <span>I want something else. Let me explain…</span>
-          <img src={arrow} alt="" />
+        <!-- acction btn-4 -->
+        <div
+          role={'button'}
+          tabindex="0"
+          on:keydown={(e) => handleKeyboardClick(e, 'I want something else. Let me explain…')}
+          on:click={() => handleClick('I want something else. Let me explain…')}
+          class="action-item"
+        >
+          <img src={lightBulb} alt="" />
+          <div>
+            <span>I want something else. Let me explain…</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
   {:else}
-  <Form on:back={handleOpenForm} title={'I want a landing page'} />
+    <Form on:back={handleOpenForm} title={selectedButtonText || ''} />
   {/if}
 </div>
 
 <style>
   .getting-started-container {
     width: 100%;
-    height: 1020px;
+    height: 1024px;
     clip-path: polygon(0 9%, 100% 0%, 100% 91%, 0% 100%);
     background: #0e1c2a;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    /* padding: 32px; */
   }
   .getting-started-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 88px;
     justify-items: center;
+
+    padding: 32px;
+  }
+
+  .getting-started-content > h1 {
+    text-align: center;
   }
 
   .getting-started-actions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 64px;
+    z-index: 999;
   }
   .action-item {
     border: 2px solid #00b478;
     box-sizing: border-box;
     border-radius: 14px;
-    padding: 48px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    padding: 18px;
   }
 
   .action-item > img {
-    margin-right: 32px;
+    margin-right: 16px;
+    height: 24px;
+    width: 24px;
   }
 
   .action-item > div > img {
-    margin-left: 48px;
+    margin-left: 16px;
+    height: 18px;
   }
 
   .action-item > div {
     flex: 1;
     display: flex;
     justify-content: space-between;
+  }
+
+  /* small screen */
+  @media only screen and (min-width: 640px) {
+    .action-item {
+      padding: 24px;
+    }
+    .action-item > img {
+      margin-right: 32px;
+      height: 48px;
+      width: 48px;
+    }
+
+    .action-item > div > img {
+      margin-left: 48px;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  /* medium */
+  @media only screen and (min-width: 700px) {
+    .getting-started-actions {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  /* large */
+  @media only screen and (min-width: 1008px) {
+    .action-item {
+      padding: 48px;
+    }
+  }
+  /* extra large */
+  @media only screen and (min-width: 1295px) {
   }
 </style>

@@ -1,10 +1,10 @@
 <script>
-  	function handleClick() {
-		alert('clicked')
-	}
+  function handleClick() {
+    alert('clicked')
+  }
 </script>
-<div class="clients-container">
 
+<div class="clients-container">
   <div class="client" />
   <div class="client" />
   <div class="client" />
