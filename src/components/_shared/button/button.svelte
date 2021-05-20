@@ -1,21 +1,27 @@
 <script>
   let className
   export { className as class }
+  export let to
 </script>
 
-<button class={`border-gradient border-gradient-purple ${className || ''}`}>
-  <slot>Button</slot>
-</button>
+{#if !to}
+  <button class={`border-gradient border-gradient-purple ${className || ''}`}>
+    <slot>Button</slot>
+  </button>
+{:else}
+  <a href={to} class={`border-gradient border-gradient-purple ${className || ''}`}>
+    <slot>Link</slot>
+  </a>
+{/if}
 
 <style>
-  button {
+  button,
+  a {
     display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 16px 32px;
     border-radius: 14px;
     background: none;
-    height: 56px;
     font-size: 18px;
     font-weight: 500;
     color: #0e1c2a;
@@ -29,7 +35,9 @@
     background-clip: padding-box, border-box;
   }
 
-  button:hover {
+  button:hover,
+  a:hover {
     cursor: pointer;
+    text-decoration: none;
   }
 </style>

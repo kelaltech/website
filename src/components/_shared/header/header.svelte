@@ -4,7 +4,7 @@
   import menuIcon from '../../../assets/images/icons/menu.png'
 </script>
 
-<div class={'header-container'}>
+<div class={'header-container '}>
   <div class={'company-logo'}>
     <a href="/">
       <img height="64" src={logo} alt="kelaltech logo" />

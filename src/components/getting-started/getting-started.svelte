@@ -4,100 +4,56 @@
   import lightBulb from '../../assets/images/icons/mdi-light_lightbulb.png'
   import smartphone from '../../assets/images/icons/smartphone.png'
   import arrow from '../../assets/images/icons/arrow-right.png'
-  import Form from '../quote-form/quote-form.svelte'
-
-  let selectedButtonText = ''
-  let openForm = false
-
-  function handleClick(text: string) {
-    selectedButtonText = text
-    openForm = true
-  }
-
-  function handleOpenForm() {
-    openForm = false
-  }
-
-  function handleKeyboardClick(event, text) {
-    // Keypresses other then Enter and Space should not trigger a command
-    if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
-      return
-    }
-    selectedButtonText = text
-    openForm = true
-  }
 </script>
 
 <div class="getting-started-container">
-  {#if !openForm}
-    <div class="getting-started-content">
-      <h1>How Can we Help You?</h1>
+  <div class="getting-started-content">
+    <h1>How Can we Help You?</h1>
 
-      <div class="getting-started-actions">
-        <!-- acction btn-1 -->
-        <div
-          role={'button'}
-          tabindex="0"
-          on:keydown={(e) => handleKeyboardClick(e, 'I want a landing page, website or a blog')}
-          on:click={() => handleClick('I want a landing page, website or a blog')}
-          class="action-item"
-        >
-          <img src={globe} alt="" />
-          <div>
-            <span>I want a landing page, website or a blog</span>
-            <img height={24} src={arrow} alt="" />
-          </div>
+    <div class="getting-started-actions">
+      <!-- acction btn-1 -->
+      <a
+        href={`/request-quote?from=home&value=I want a landing page, website or a blog`}
+        class="action-item"
+      >
+        <img src={globe} alt="" />
+        <div>
+          <span>I want a landing page, website or a blog</span>
+          <img height={24} src={arrow} alt="" />
         </div>
+      </a>
 
-        <!-- acction btn-2 -->
-        <div
-          role={'button'}
-          tabindex="0"
-          on:keydown={(e) => handleKeyboardClick(e, 'I want a custom web app')}
-          on:click={() => handleClick('I want a custom web app')}
-          class="action-item"
-        >
-          <img src={pointer} alt="" />
-          <div>
-            <span>I want a custom web app</span>
-            <img height={24} src={arrow} alt="" />
-          </div>
+      <!-- acction btn-2 -->
+      <a href={`/request-quote?from=home&value=I want a custom web app`} class="action-item">
+        <img src={pointer} alt="" />
+        <div>
+          <span>I want a custom web app</span>
+          <img height={24} src={arrow} alt="" />
         </div>
+      </a>
 
-        <!-- acction btn-3 -->
-        <div
-          role={'button'}
-          tabindex="0"
-          on:keydown={(e) => handleKeyboardClick(e, 'I want a custom mobile app')}
-          on:click={() => handleClick('I want a custom mobile app')}
-          class="action-item"
-        >
-          <img src={smartphone} alt="" />
-          <div>
-            <span>I want a custom mobile app</span>
-            <img height={24} src={arrow} alt="" />
-          </div>
+      <!-- acction btn-3 -->
+      <a href={`/request-quote?from=home&value=I want a custom mobile app`} class="action-item">
+        <img src={smartphone} alt="" />
+        <div>
+          <span>I want a custom mobile app</span>
+          <img height={24} src={arrow} alt="" />
         </div>
+      </a>
 
-        <!-- acction btn-4 -->
-        <div
-          role={'button'}
-          tabindex="0"
-          on:keydown={(e) => handleKeyboardClick(e, 'I want something else. Let me explain…')}
-          on:click={() => handleClick('I want something else. Let me explain…')}
-          class="action-item"
-        >
-          <img src={lightBulb} alt="" />
-          <div>
-            <span>I want something else. Let me explain…</span>
-            <img height={24} src={arrow} alt="" />
-          </div>
+      <!-- acction btn-4 -->
+      <a
+        href={`/request-quote?from=home&value=I want something else. Let me explain…`}
+        class="action-item"
+      >
+        <img src={lightBulb} alt="" />
+        <div>
+          <span>I want something else. Let me explain…</span>
+          <img height={24} src={arrow} alt="" />
         </div>
-      </div>
+      </a>
     </div>
-  {:else}
-    <Form on:back={handleOpenForm} title={selectedButtonText || ''} />
-  {/if}
+  </div>
 </div>
 
 <style>
@@ -139,8 +95,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     padding: 18px;
+    color: #fff;
+  }
+
+  .action-item:hover {
+    text-decoration: none;
   }
 
   .action-item > img {

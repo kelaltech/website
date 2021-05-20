@@ -20,7 +20,7 @@
       </div>
 
       <div class="hero-content-action">
-        <Button>Request a Quote</Button>
+        <Button to={'/request-quote'}>Request a Quote</Button>
         <span>or, <a href="" class={'find-out'}>find out more</a>&nbsp; ↓</span>
       </div>
     </div>
@@ -106,11 +106,11 @@
   /* small screen */
   @media only screen and (min-width: 640px) {
     .hero-container {
-      height: calc(980px - 112px);
+      height: calc(990px - 112px);
     }
 
     .hero-overlay-container {
-      height: 980px;
+      height: 990px;
       padding-top: 0;
     }
 
