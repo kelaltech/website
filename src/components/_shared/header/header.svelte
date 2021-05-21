@@ -33,7 +33,7 @@
     justify-content: space-between;
     height: 112px;
     box-sizing: border-box;
-    z-index: 999;
+    z-index: 9999;
     color: var(--color);
   }
 

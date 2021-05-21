@@ -6,57 +6,77 @@
   import arrow from '../../assets/images/icons/arrow-right.png'
 </script>
 
-<div class="getting-started-container">
-  <div class="getting-started-content">
-    <h1>How Can we Help You?</h1>
+<div class="get-start-box">
+  <div class="getting-started-container">
+    <div class="getting-started-content">
+      <h1>How Can we Help You?</h1>
 
-    <div class="getting-started-actions">
-      <!-- acction btn-1 -->
-      <a
-        href={`/request-quote?from=home&value=I want a landing page, website or a blog`}
-        class="action-item"
-      >
-        <img src={globe} alt="" />
-        <div>
-          <span>I want a landing page, website or a blog</span>
-          <img height={24} src={arrow} alt="" />
-        </div>
-      </a>
+      <div class="getting-started-actions">
+        <!-- acction btn-1 -->
+        <a
+          href={`/request-quote?from=home&value=I want a landing page, website or a blog`}
+          class="action-item"
+        >
+          <img src={globe} alt="" />
+          <div>
+            <span>I want a landing page, website or a blog</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
+        </a>
 
-      <!-- acction btn-2 -->
-      <a href={`/request-quote?from=home&value=I want a custom web app`} class="action-item">
-        <img src={pointer} alt="" />
-        <div>
-          <span>I want a custom web app</span>
-          <img height={24} src={arrow} alt="" />
-        </div>
-      </a>
+        <!-- acction btn-2 -->
+        <a href={`/request-quote?from=home&value=I want a custom web app`} class="action-item">
+          <img src={pointer} alt="" />
+          <div>
+            <span>I want a custom web app</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
+        </a>
 
-      <!-- acction btn-3 -->
-      <a href={`/request-quote?from=home&value=I want a custom mobile app`} class="action-item">
-        <img src={smartphone} alt="" />
-        <div>
-          <span>I want a custom mobile app</span>
-          <img height={24} src={arrow} alt="" />
-        </div>
-      </a>
+        <!-- acction btn-3 -->
+        <a href={`/request-quote?from=home&value=I want a custom mobile app`} class="action-item">
+          <img src={smartphone} alt="" />
+          <div>
+            <span>I want a custom mobile app</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
+        </a>
 
-      <!-- acction btn-4 -->
-      <a
-        href={`/request-quote?from=home&value=I want something else. Let me explain…`}
-        class="action-item"
-      >
-        <img src={lightBulb} alt="" />
-        <div>
-          <span>I want something else. Let me explain…</span>
-          <img height={24} src={arrow} alt="" />
-        </div>
-      </a>
+        <!-- acction btn-4 -->
+        <a
+          href={`/request-quote?from=home&value=I want something else. Let me explain…`}
+          class="action-item"
+        >
+          <img src={lightBulb} alt="" />
+          <div>
+            <span>I want something else. Let me explain…</span>
+            <img height={24} src={arrow} alt="" />
+          </div>
+        </a>
+      </div>
     </div>
   </div>
+
+  <div class="clip-path-match-footer" />
 </div>
 
 <style>
+  .get-start-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .clip-path-match-footer {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    /* background: red; */
+    background: #fbfbfb;
+
+    width: 100%;
+    height: 200px;
+  }
   .getting-started-container {
     width: 100%;
     height: 1024px;
@@ -68,6 +88,7 @@
     color: #fff;
     /* padding: 32px; */
   }
+
   .getting-started-content {
     display: grid;
     grid-template-columns: 1fr;

@@ -17,41 +17,41 @@
         <p>
           We Empower Makers <br /> Using Digital Platforms
         </p>
-        <a href=""> Talk to sales → </a>
+        <a href="/request-quote"> Talk to sales → </a>
       </div>
 
       <div class={'footer-titles'}>
         <h5>SOLUTIONS</h5>
 
         <div>
-          <a href=""> Design a Website </a>
-          <a href=""> Develop a Web App </a>
-          <a href=""> Build a Mobile App </a>
-          <a href=""> Open Source </a>
+          <a href="/request-quote"> Design a Website </a>
+          <a href="/request-quote"> Develop a Web App </a>
+          <a href="/request-quote"> Build a Mobile App </a>
+          <a href="/request-quote"> Open Source </a>
         </div>
       </div>
 
       <div class={'footer-titles'}>
         <h5>COMPANY</h5>
         <div>
-          <a href=""> About Us </a>
-          <a href=""> Contact </a>
-          <a href=""> Jobs </a>
-          <a href=""> Newsletter </a>
+          <a href="/about"> About Us </a>
+          <a href="/contact"> Contact </a>
+          <a href="/jobs"> Jobs </a>
+          <a href="/news"> Newsletter </a>
         </div>
       </div>
     </div>
     <div class={'icon-link-container'}>
-      <a href="">
+      <a href="https://twitter.com/kelaltech" target={'_blank'}>
         <img width={32} height={32} src={twitter} alt="link to twiiter" />
       </a>
-      <a href="">
+      <a href="https://www.facebook.com/kelaltech" target={'_blank'}>
         <img width={32} height={32} src={facebook} alt="link to  facebook" />
       </a>
-      <a href="">
+      <a href="https://www.instagram.com/kelaltech/" target={'_blank'}>
         <img width={32} height={32} src={instagram} alt="link to  instagram" />
       </a>
-      <a href="">
+      <a href="https://www.linkedin.com/company/kelal" target={'_blank'}>
         <img width={32} height={32} src={linkedin} alt="link to linkedin" />
       </a>
     </div>
@@ -59,8 +59,10 @@
       <p>2020 © Kelal Tech PLC. All rights reserved.</p>
 
       <div>
-        <a href=""> Terms </a>
-        <a href=""> Privacy Policy </a>
+        <a href="https://privacyterms.io/view/USu7DVMs-vlvivBWS-b7ietU/" target="_blank"> Terms </a>
+        <a href="https://privacyterms.io/view/24im3gmH-XDp5sR8O-lGMFTk/" target={'_blank'}>
+          Privacy Policy
+        </a>
       </div>
     </div>
   </div>
