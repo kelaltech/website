@@ -68,6 +68,7 @@
     line-height: 84px;
     background: radial-gradient(100% 423.18% at 0% 100%, #00b478 0%, #ffc800 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 300 !important;
     margin-bottom: 48px;

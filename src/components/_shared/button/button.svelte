@@ -32,6 +32,7 @@
       radial-gradient(100% 423.18% at 0% 100%, #00b478 0%, #ffc800 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
+    -webkit-background-clip: padding-box, border-box;
   }
 
   button:hover,
