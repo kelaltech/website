@@ -1,6 +1,6 @@
 <script lang="ts">
   export let type: 'error' | 'primary' = 'primary'
-  export let to: string = '/'
+  export let to = '/'
 </script>
 
 <div class={`confirmation-modal-box ${type === 'primary' ? 'main' : 'error'}`}>

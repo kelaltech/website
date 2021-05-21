@@ -1,24 +1,19 @@
 import { email } from './email'
 
-function getFormBody(body) {
-  return [...body.entries()].reduce((data, [k, v]) => {
-    let value = v
-    if (value === 'true') value = true
-    if (value === 'false') value = false
-    if (k in data) data[k] = Array.isArray(data[k]) ? [...data[k], value] : [data[k], value]
-    else data[k] = value
-    return data
-  }, {})
-}
-
 export type IMessage = {
   from: string
   subject: string
   text: string
 }
 
+type EndpointOutput = {
+  status?: number
+  headers?: Headers
+  body?: string | Uint8Array | JSON | unknown
+}
+
 // POST /api/message
-export async function post(request, response) {
+export async function post(request): Promise<EndpointOutput> {
   if (request.method.toUpperCase() !== 'POST') return { status: 405 }
 
   const body = request.body

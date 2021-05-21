@@ -6,7 +6,7 @@
   import pointer from '../assets/images/icons/mouse-pointer.png'
   import smartphone from '../assets/images/icons/smartphone.png'
   import Form from '../components/quote-form/quote-form.svelte'
-
+  import Share from '../components/_shared/share/share.svelte'
   let selectedButtonText = ''
   let openForm = false
 
@@ -40,7 +40,12 @@
 <div class="getting-started-container">
   {#if !openForm}
     <div class="getting-started-content">
-      <h1>How Can we Help You?</h1>
+      <div class={'getting-started-header-box'}>
+        <h1>How Can we Help You?</h1>
+        <div class="share-btn">
+          <Share />
+        </div>
+      </div>
 
       <div class="getting-started-actions">
         <!-- acction btn-1 -->
@@ -110,6 +115,17 @@
 </div>
 
 <style>
+  .getting-started-header-box {
+    display: flex;
+    width: 100%;
+  }
+  .getting-started-header-box > h1 {
+    flex: 80%;
+    text-align: center;
+  }
+  .getting-started-header-box > .share-btn {
+    align-self: center;
+  }
   .getting-started-container {
     width: 100%;
     height: auto;

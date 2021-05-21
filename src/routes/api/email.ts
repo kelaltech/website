@@ -17,7 +17,7 @@ export function email(config: IEmailConfig): Promise<SentMessageInfo> {
     console.warn(
       'WARNING! Skipping sending an email, because NO_EMAIL environment variable is set to true.'
     )
-    return undefined as any
+    return undefined
   }
 
   if (!config) throw new Error('NO_EMAIL_CONFIG: Email configuration is not found.')

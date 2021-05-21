@@ -21,7 +21,7 @@
 
       <div class="hero-content-action">
         <Button to={'/request-quote'}>Request a Quote</Button>
-        <span>or, <a href="" class={'find-out'}>find out more</a>&nbsp; ↓</span>
+        <span>or, <a href="#get_started_now" class={'find-out'}>find out more</a>&nbsp; ↓</span>
       </div>
     </div>
   </div>

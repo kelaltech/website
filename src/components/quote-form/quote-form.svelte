@@ -7,15 +7,13 @@
   import { createEventDispatcher } from 'svelte'
   import Modal from '../_shared/confirmation-modal/modal.svelte'
   import Loading from '../_shared/loading/loading.svelte'
-  import Button from '../_shared/button/button.svelte'
   const dispatch = createEventDispatcher()
 
   function handleBack() {
     dispatch('back')
   }
 
-  function handleForm(e: Event) {
-    //valdate form
+  function handleForm() {
     let regex = /^(?:\d{10}|\w+@\w+\.\w{2,3})$/
     if (!contact.match(regex)) {
       errors.contact = 'Invalid input, Enter a valid phone or email address'
@@ -35,6 +33,7 @@
       .then((resp) => {
         contact = ''
         description = ''
+        console.log(resp.json())
       })
       .catch((e) => {
         console.log(e)

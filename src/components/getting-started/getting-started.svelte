@@ -4,12 +4,19 @@
   import lightBulb from '../../assets/images/icons/mdi-light_lightbulb.png'
   import smartphone from '../../assets/images/icons/smartphone.png'
   import arrow from '../../assets/images/icons/arrow-right.png'
+  // import share from '../../assets/images/icons/share.png'
+  import Share from '../_shared/share/share.svelte'
 </script>
 
-<div class="get-start-box">
+<div class="get-start-box" id="get_started_now">
   <div class="getting-started-container">
     <div class="getting-started-content">
-      <h1>How Can we Help You?</h1>
+      <div class={'getting-started-header-box'}>
+        <h1>How Can we Help You?</h1>
+        <div class="share-btn">
+          <Share />
+        </div>
+      </div>
 
       <div class="getting-started-actions">
         <!-- acction btn-1 -->
@@ -61,6 +68,17 @@
 </div>
 
 <style>
+  .getting-started-header-box {
+    display: flex;
+    width: 100%;
+  }
+  .getting-started-header-box > h1 {
+    flex: 80%;
+    text-align: center;
+  }
+  .getting-started-header-box > .share-btn {
+    align-self: center;
+  }
   .get-start-box {
     position: relative;
     width: 100%;
@@ -71,7 +89,6 @@
     position: absolute;
     bottom: 0;
     z-index: -1;
-    /* background: red; */
     background: #fbfbfb;
 
     width: 100%;
@@ -96,10 +113,6 @@
     justify-items: center;
 
     padding: 32px;
-  }
-
-  .getting-started-content > h1 {
-    text-align: center;
   }
 
   .getting-started-actions {

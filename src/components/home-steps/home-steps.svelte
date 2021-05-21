@@ -11,7 +11,7 @@
       the requirements, timeline and pricing.
     </p>
 
-    <a href="">Get started now →</a>
+    <a href="#get_started_now">Get started now →</a>
   </div>
   <!-- item-2 -->
   <div class="step-item">
@@ -25,7 +25,7 @@
       improve the design with a few feeback rounds.
     </p>
 
-    <a href="">Find your contact person →</a>
+    <a href="/request-quote">Find your contact person →</a>
   </div>
 
   <!-- item-3 -->
@@ -40,7 +40,7 @@
       Then you’ll tweet great things about us.
     </p>
 
-    <a href="">Tell your friends →</a>
+    <a href="/request-quote">Request a quote →</a>
   </div>
 </div>
 
