@@ -1,3 +1,7 @@
+<script context="module">
+  export const hydrate = true
+</script>
+
 <script lang="ts">
   import { onMount } from 'svelte'
   import arrow from '../assets/images/icons/arrow-right.png'
