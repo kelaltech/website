@@ -1,10 +1,13 @@
 <script lang="ts">
   export let title
-  let submit
+  let submit = null
   let contact = ''
   let description = ''
+  let errors = {contact:'',description:''}
   import { createEventDispatcher } from 'svelte'
-
+  import Modal from '../_shared/confirmation-modal/modal.svelte'
+  import Loading from '../_shared/loading/loading.svelte'
+  import Button from '../_shared/button/button.svelte'
   const dispatch = createEventDispatcher()
 
   function handleBack() {
@@ -12,27 +15,61 @@
   }
 
   function handleForm(e: Event) {
-    console.log(contact, description, title)
+    //valdate form
+    let regex = /^(?:\d{10}|\w+@\w+\.\w{2,3})$/
+    if(!contact.match(regex)){
+      errors.contact = 'Invalid input, Enter a valid phone or email address'
+      return
+    }
+
+    if(description === ''){
+      errors.description = ('description is required')
+      return
+    }
+
+
+
     submit = fetch('/api/message', {
       method: 'POST',
       body: JSON.stringify({ from: contact, text: description, subject: title }),
       headers: { 'content-type': 'application/json' },
     })
       .then((resp) => {
-        console.log(resp.json())
+         contact = ''
+         description = ''
       })
       .catch((e) => {
         console.log(e)
+        submit=null
       })
   }
 </script>
 
+{#if submit}
+
+  {#await submit}
+  <div class={'loading-container'}>
+    <Loading/>
+  </div>
+  {:then resp}
+    <Modal  >
+    <p class={'medium-300 m0'}>🎉 You're all set!</p>
+    <pre class={'medium-300 m0'}>We will get back to you soon!</pre>
+    </Modal>
+   {:catch error}
+   <Modal type={'error'}>
+    <p class={'medium-300 m0'}>Error!</p>
+    <pre class={'medium-300 m0'}>{error.message}</pre>
+    </Modal>
+  {/await}
+{/if}
 <form on:submit|preventDefault={handleForm} method="POST" class={'quote-form-container'}>
   <h1 class={'h1-700'}>Tell us more...</h1>
 
   <div class={'input-container'}>
     <label class={'small-500 label'} for="emailorphone"> Your email or phone:</label>
     <input
+      on:change={()=>errors.contact=''}
       placeholder="type your text here"
       type="text"
       class="primary default-400 input"
@@ -40,6 +77,7 @@
       name="contact"
       bind:value={contact}
     />
+     <p class={'input-error very-small-400'}>{errors.contact}</p>
   </div>
 
   <div class={'input-container'}>
@@ -47,12 +85,15 @@
       Tell us about yourself and the project:</label
     >
     <textarea
+      on:change={()=>errors.description=''}
       placeholder="type your text here"
       class="primary default-400 input text-area"
       id={'description'}
       name={'description'}
       bind:value={description}
     />
+
+    <p class={'input-error very-small-400'}>{errors.description}</p>
   </div>
 
   <div class={'form-action-container'}>
@@ -62,6 +103,17 @@
 </form>
 
 <style>
+
+  .loading-container {
+    position: absolute;
+    z-index: 9999;
+  }
+  .m0{
+    margin:0;
+  }
+  .input-error {
+    color: rgb(255, 32, 32);
+  }
   .quote-form-container {
     width: 100%;
     display: grid;
