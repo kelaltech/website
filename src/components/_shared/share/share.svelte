@@ -7,7 +7,7 @@
     Facebook,
     Twitter,
   } from 'svelte-share-buttons-component'
-  import share from '../../../assets/images/icons/share.png'
+  import share from '../../../assets/images/icons/share.svg'
   const url = 'https://kelaltech.com/request-quote'
   const title = 'Kelal Tech PLC Official Website'
   const desc = `Want to make a deal with us?Looking for some information? Or, just want to chat? We'd be very happy to hear from you.`

@@ -1,10 +1,10 @@
 <script lang="ts">
-  import globe from '../../assets/images/icons/globe.png'
-  import pointer from '../../assets/images/icons/mouse-pointer.png'
-  import lightBulb from '../../assets/images/icons/mdi-light_lightbulb.png'
-  import smartphone from '../../assets/images/icons/smartphone.png'
-  import arrow from '../../assets/images/icons/arrow-right.png'
-  // import share from '../../assets/images/icons/share.png'
+  import globe from '../../assets/images/icons/globe.svg'
+  import pointer from '../../assets/images/icons/mouse-pointer.svg'
+  import lightBulb from '../../assets/images/icons/mdi-light_lightbulb.svg'
+  import smartphone from '../../assets/images/icons/smartphone.svg'
+  import arrow from '../../assets/images/icons/arrow-right.svg'
+  // import share from '../../assets/images/icons/share.svg'
   import Share from '../_shared/share/share.svelte'
 </script>
 

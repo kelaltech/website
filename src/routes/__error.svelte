@@ -9,7 +9,7 @@
   </div>
 
   <div class="btn-container">
-    <Button>Go Home</Button>
+    <Button to={'/'}>Go Home</Button>
   </div>
 </div>
 

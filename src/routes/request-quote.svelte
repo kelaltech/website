@@ -4,11 +4,11 @@
 
 <script lang="ts">
   import { onMount } from 'svelte'
-  import arrow from '../assets/images/icons/arrow-right.png'
-  import globe from '../assets/images/icons/globe.png'
-  import lightBulb from '../assets/images/icons/mdi-light_lightbulb.png'
-  import pointer from '../assets/images/icons/mouse-pointer.png'
-  import smartphone from '../assets/images/icons/smartphone.png'
+  import arrow from '../assets/images/icons/arrow-right.svg'
+  import globe from '../assets/images/icons/globe.svg'
+  import lightBulb from '../assets/images/icons/mdi-light_lightbulb.svg'
+  import pointer from '../assets/images/icons/mouse-pointer.svg'
+  import smartphone from '../assets/images/icons/smartphone.svg'
   import Form from '../components/quote-form/quote-form.svelte'
   import Share from '../components/_shared/share/share.svelte'
   let selectedButtonText = ''

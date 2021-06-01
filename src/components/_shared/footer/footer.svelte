@@ -1,9 +1,9 @@
 <script>
-  import logo from '../../../assets/images/brand/logo.png'
-  import facebook from '../../../assets/images/icons/facebook.png'
-  import instagram from '../../../assets/images/icons/instagram.png'
-  import linkedin from '../../../assets/images/icons/linkedin.png'
-  import twitter from '../../../assets/images/icons/twitter.png'
+  import logo from '../../../assets/images/brand/logo.svg'
+  import facebook from '../../../assets/images/icons/facebook.svg'
+  import instagram from '../../../assets/images/icons/instagram.svg'
+  import linkedin from '../../../assets/images/icons/linkedin.svg'
+  import twitter from '../../../assets/images/icons/twitter.svg'
 </script>
 
 <div class={'footer-container'}>

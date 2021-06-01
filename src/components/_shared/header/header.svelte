@@ -1,7 +1,7 @@
 <script>
-  import logo from '../../../assets/images/brand/logo.png'
+  import logo from '../../../assets/images/brand/logo.svg'
   import Button from '../button/button.svelte'
-  import menuIcon from '../../../assets/images/icons/menu.png'
+  import menuIcon from '../../../assets/images/icons/menu.svg'
 
   export let backgroundColor
   export let color = '#0e1c2a'
