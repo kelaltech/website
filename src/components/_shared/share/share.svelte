@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .share-icon-container {
     position: relative;
     z-index: 1;
@@ -51,13 +51,17 @@
     display: inline-block;
     padding: 8px 16px;
     display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
   }
 
   .share-icons-box {
     position: absolute;
-    z-index: 2;
+    z-index: 9999999;
     width: auto;
     height: 300px;
     display: none;
+    left: -250px;
+    top: 20px;
   }
 </style>

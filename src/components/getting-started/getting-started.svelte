@@ -71,14 +71,20 @@
   .getting-started-header-box {
     display: flex;
     width: 100%;
+
+    h1 {
+      flex: 80%;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .share-btn {
+      align-self: center;
+      width: 10%;
+      height: 24px;
+    }
   }
-  .getting-started-header-box > h1 {
-    flex: 80%;
-    text-align: center;
-  }
-  .getting-started-header-box > .share-btn {
-    align-self: center;
-  }
+
   .get-start-box {
     position: relative;
     width: 100%;
@@ -157,6 +163,22 @@
     justify-content: space-between;
   }
 
+
+  @media only screen and (min-width: 500px) {
+    .getting-started-content {
+      gap: 88px;
+    }
+
+    .getting-started-header-box {
+      h1 {
+        font-size: 32px;
+      }
+
+      .share-btn {
+        width: auto;
+      }
+    }
+  }
   /* small screen */
   @media only screen and (min-width: 640px) {
     .action-item {
