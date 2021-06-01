@@ -17,10 +17,12 @@
     <div class={'action-btn'}>
       <Button to={'/request-quote'}>Lets talk</Button>
     </div>
-    <button class={'menu-icon'}>
+    <!-- <button class={'menu-icon'}>
       <img src={menuIcon} alt="menu icon" />
       <span>Menu</span>
-    </button>
+    </button> -->
+
+    <!-- TODO uncomment the above when menu items are avialble  -->
   </div>
 </div>
 
@@ -33,6 +35,7 @@
     justify-content: space-between;
     height: 112px;
     box-sizing: border-box;
+    position: relative;
     z-index: 9999;
     color: var(--color);
   }
