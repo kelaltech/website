@@ -1,8 +1,8 @@
 <script>
   import awtar from '../../assets/images/clients/awtar.png'
 
-  import furniture from '../../assets/images/clients/3f.png'
-  import addis_zeybe from '../../assets/images/clients/addis_zeybe.png'
+  import furniture from '../../assets/images/clients/3f.svg'
+  import addis_zeybe from '../../assets/images/clients/addis_zeybe.svg'
   import alama from '../../assets/images/clients/alama.png'
   import dream from '../../assets/images/clients/dream.png'
   import nyala from '../../assets/images/clients/nyala.png'
