@@ -118,7 +118,7 @@
   {/if}
 </div>
 
-<style>
+<style lang="scss">
   .getting-started-header-box {
     display: flex;
     width: 100%;
@@ -167,12 +167,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     padding: 18px;
-  }
+    transition: 0.25s;
 
-  .action-item:hover {
-    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+
+      box-shadow: 0 0.5em 0.5em -0.4em #00b478;
+      transform: translateY(-0.25em);
+    }
   }
 
   .action-item > img {

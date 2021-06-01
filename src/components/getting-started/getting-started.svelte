@@ -67,7 +67,7 @@
   <div class="clip-path-match-footer" />
 </div>
 
-<style>
+<style lang="scss">
   .getting-started-header-box {
     display: flex;
     width: 100%;
@@ -131,10 +131,13 @@
     align-items: center;
     padding: 18px;
     color: #fff;
-  }
+    transition: 0.25s;
+    &:hover {
+      text-decoration: none;
 
-  .action-item:hover {
-    text-decoration: none;
+      box-shadow: 0 0.5em 0.5em -0.4em #00b478;
+      transform: translateY(-0.25em);
+    }
   }
 
   .action-item > img {
