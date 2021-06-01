@@ -54,12 +54,6 @@
   }
 
   /* small screen */
-  @media only screen and (min-width: 360px) {
-    .clients-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  /* small screen */
   @media only screen and (min-width: 640px) {
     .clients-container {
       grid-template-columns: repeat(3, 1fr);

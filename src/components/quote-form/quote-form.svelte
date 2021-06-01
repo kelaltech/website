@@ -116,7 +116,7 @@
     gap: 64px;
     justify-items: center;
 
-    padding: 0 32px;
+    padding: 32px;
   }
 
   .input-container {

@@ -82,7 +82,7 @@
     top: 31px;
     padding-top: 64px;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     position: absolute;
     background-image: url('../../assets/images/home-hero-bg.svg');
     background-size: cover;
