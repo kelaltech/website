@@ -63,8 +63,6 @@
       </div>
     </div>
   </div>
-
-  <div class="clip-path-match-footer" />
 </div>
 
 <style lang="scss">
@@ -91,15 +89,6 @@
     height: auto;
   }
 
-  .clip-path-match-footer {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    background: #fbfbfb;
-
-    width: 100%;
-    height: 200px;
-  }
   .getting-started-container {
     width: 100%;
     height: 1024px;
@@ -162,7 +151,6 @@
     display: flex;
     justify-content: space-between;
   }
-
 
   @media only screen and (min-width: 500px) {
     .getting-started-content {

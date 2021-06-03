@@ -80,7 +80,7 @@
   }
   .hero-overlay-container {
     top: 31px;
-    padding-top: 64px;
+    /* padding-top: 64px; */
     width: 100%;
     height: 120vh;
     position: absolute;
