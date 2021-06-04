@@ -19,7 +19,7 @@
     </div>
 
     <div class={'news-action'}>
-      <a href="/news" class={'primary small-400'}>Read article →</a>
+      <a href={`/article/${'slug'}`} class={'primary small-400'}>Read article →</a>
     </div>
   </div>
 </div>
