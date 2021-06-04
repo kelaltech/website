@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 14px;
-    max-width: 388px;
+    // max-width: 388px;
     width: 100%;
 
     img {
