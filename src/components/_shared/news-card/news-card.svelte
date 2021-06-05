@@ -22,7 +22,7 @@
       </p>
 
       <div class="news-card-action">
-        <a href="/news" class="primary">Read article →</a>
+        <a href={`/newsletter/${'slug'}`} class="primary">Read article →</a>
       </div>
     </div>
   </div>
