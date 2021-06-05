@@ -34,7 +34,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
-
+    max-width: 1440px;
+    margin: 0 auto;
     margin-bottom: 52px;
   }
 

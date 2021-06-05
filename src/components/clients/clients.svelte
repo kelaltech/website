@@ -46,6 +46,8 @@
     grid-template-columns: 1fr;
     gap: 16px;
     justify-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .client {

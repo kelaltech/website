@@ -48,10 +48,13 @@
   .step-container {
     max-width: 1440px;
     padding: 0 32px;
+    margin: 0 auto;
     margin-top: 64px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
+
+    max-width: 1440px;
   }
 
   .step-item > a {

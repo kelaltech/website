@@ -87,6 +87,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 64px;
+    max-width: 1440px;
+    margin: 0 auto;
     .content-hero {
       display: grid;
       grid-template-columns: 1fr;
@@ -134,6 +136,8 @@
   }
 
   .news-card-list {
+    max-width: 1440px;
+    margin: 0 auto;
     margin-top: -450px;
     padding: 0 32px;
     box-sizing: border-box;
