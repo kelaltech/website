@@ -3,6 +3,19 @@
   import Subscribe from '../../components/_shared/subscribe/subscribe.svelte'
   import SocialMedia from '../../components/_shared/social-media-links/social-media-links.svelte'
   import bg from '../../assets/images/article-card-img.png'
+  import {
+    Email,
+    Reddit,
+    LinkedIn,
+    Telegram,
+    Facebook,
+    Twitter,
+  } from 'svelte-share-buttons-component'
+
+  // TODO change these values
+  const url = 'https://kelaltech.com/request-quote'
+  const title = 'Kelal Tech PLC Official Website'
+  const desc = `Want to make a deal with us?Looking for some information? Or, just want to chat? We'd be very happy to hear from you.`
 </script>
 
 <div>
@@ -15,10 +28,40 @@
       <FilterChip active>ANNOUNCEMENT</FilterChip>
     </div>
     <div class="article-header">
-      <h1 class="h0-700">Kelal Tech Gets a New Brand & Website Refresh</h1>
+      <h1 class="h0-700">
+        Kelal Tech Gets a New Brand & Website Refresh Kelal Tech Gets a New Brand & Website
+      </h1>
       <div class="header-action">
-        <span>September 9, 2013</span>
-        <div>social</div>
+        <span class="large-300 primary-dark">September 9, 2013</span>
+        <div class="share-icons-box">
+          <div class="wrap-icon">
+            <Email subject={title} body="{desc} {url}" />
+          </div>
+          <div class="wrap-icon">
+            <LinkedIn class="share-button" {url} />
+          </div>
+          <div class="wrap-icon">
+            <Facebook class="share-button" {url} />
+          </div>
+          <div class="wrap-icon">
+            <Twitter
+              class="share-button"
+              text={title}
+              {url}
+              hashtags="github,svelte"
+              via="username"
+              related="other,users"
+            />
+          </div>
+
+          <div class="wrap-icon">
+            <Telegram class="share-button" text={title} {url} />
+          </div>
+
+          <div class="wrap-icon">
+            <Reddit class="share-button" {title} {url} />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -92,7 +135,7 @@
   .article-header-box {
     margin-top: 32px;
     margin-bottom: 176px;
-    padding: 0 140px;
+    padding: 0 16px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
@@ -104,24 +147,89 @@
     .article-header {
       h1 {
         margin-bottom: 12px;
+        font-size: 32px;
+        line-height: 48px;
       }
       .header-action {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        span {
+          opacity: 0.56;
+        }
       }
     }
 
     .article-desc {
       display: grid;
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: 1fr;
       gap: 64px;
 
       p {
-        // max-width: 800px;
         font-size: 20px;
         line-height: 35px;
         font-family: 'Lora';
       }
+    }
+  }
+
+  .share-icons-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    .wrap-icon {
+      margin-right: 16px;
+      border-radius: 2px;
+      width: 32px;
+      height: 32px;
+      background-color: red;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (min-width: 550px) {
+      margin-top: 0;
+    }
+  }
+
+  /* medium */
+  @media only screen and (min-width: 700px) {
+    .article-header-box {
+      padding: 0 32px;
+    }
+    .article-header {
+      h1 {
+        font-size: 48px !important;
+        line-height: 72px !important;
+      }
+    }
+  }
+
+  /* medium */
+  @media only screen and (min-width: 960px) {
+    .article-desc {
+      grid-template-columns: 3fr 1fr !important;
+    }
+  }
+
+  @media only screen and (min-width: 1008px) {
+    .article-header-box {
+      padding: 0 64px;
+    }
+  }
+
+  @media only screen and (min-width: 1295px) {
+    .article-header-box {
+      padding: 0 140px;
+      max-width: 1440px;
+      margin: 32px auto 176px auto;
     }
   }
 </style>
