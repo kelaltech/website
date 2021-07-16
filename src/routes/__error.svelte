@@ -1,6 +1,12 @@
 <script>
   import Button from '../components/_shared/button/button.svelte'
+  import { seo } from '../lib/seo-store'
   import pageNotFound from '../assets/images/page-not-found.svg'
+
+  seo.update((current) => {
+    current.title = 'Request Quotation'
+    return current
+  })
 </script>
 
 <div class="page-not-found">
