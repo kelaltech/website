@@ -56,7 +56,7 @@
       </a>
     </div>
     <div class={'copy-right-box'}>
-      <p>2020 © Kelal Tech PLC. All rights reserved.</p>
+      <p>2021 © Kelal Tech PLC. All rights reserved.</p>
 
       <div>
         <a href="https://privacyterms.io/view/USu7DVMs-vlvivBWS-b7ietU/" target="_blank"> Terms </a>
@@ -161,6 +161,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32;
+  }
+
+  .copy-right-box > div > a {
+    color: #0e1c2a !important;
   }
 
   /* small screen */

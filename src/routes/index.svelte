@@ -5,6 +5,7 @@
   import GettingStarted from '../components/getting-started/getting-started.svelte'
 </script>
 
+
 <Hero />
 
 <HomeSteps />

@@ -3,6 +3,7 @@
 </script>
 
 <script lang="ts">
+  import { seo } from '../lib/seo-store'
   import { onMount } from 'svelte'
   import arrow from '../assets/images/icons/arrow-right.svg'
   import globe from '../assets/images/icons/globe.svg'
@@ -11,6 +12,12 @@
   import smartphone from '../assets/images/icons/smartphone.svg'
   import Form from '../components/quote-form/quote-form.svelte'
   import Share from '../components/_shared/share/share.svelte'
+
+  seo.update((current) => {
+    current.title = 'Request Quotation'
+    return current
+  })
+
   let selectedButtonText = ''
   let openForm = false
 
