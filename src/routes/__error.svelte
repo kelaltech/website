@@ -4,7 +4,7 @@
   import pageNotFound from '../assets/images/page-not-found.svg'
 
   seo.update((current) => {
-    current.title = 'Request Quotation'
+    current.title = 'Page not found'
     return current
   })
 </script>

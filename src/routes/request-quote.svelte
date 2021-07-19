@@ -14,7 +14,7 @@
   import Share from '../components/_shared/share/share.svelte'
 
   seo.update((current) => {
-    current.title = 'Request Quotation'
+    current.title = 'Request quotation'
     return current
   })
 
