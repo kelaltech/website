@@ -3,6 +3,7 @@ node_modules
 /.svelte-kit
 /build
 /functions
+/.husky
 .env
 /.vercel_build_output
 /.vscode
